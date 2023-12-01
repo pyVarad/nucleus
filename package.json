@@ -2,8 +2,11 @@
   "name": "design-system",
   "version": "0.0.0",
   "license": "MIT",
+  "nx": {},
   "scripts": {
-    "build": "nx run-many -t build"
+    "build": "nx run-many -t build --skip-nx-cache",
+    "dev-react": "nx dev nucleus-react-consumer",
+    "dev-angular": "nx start nucleus-angular-consumer"
   },
   "private": true,
   "devDependencies": {
