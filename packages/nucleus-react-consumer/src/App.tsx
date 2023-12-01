@@ -1,12 +1,15 @@
 import './App.css';
-import { MyComponent, defineCustomElements } from 'nucleus-react';
+import { NucleusButton, defineCustomElements } from 'nucleus-react';
 
 defineCustomElements();
 
 function App() {
   return (
     <div className="App">
-      <MyComponent first="Varad" last="A G" />
+      <NucleusButton buttontype='primary'>Primary Button</NucleusButton>
+      <NucleusButton buttontype='callToAction'>Call to Action</NucleusButton>
+      <NucleusButton buttontype='outline'>Outline</NucleusButton>
+      <NucleusButton buttontype='text'>Text</NucleusButton>
     </div>
   );
 }

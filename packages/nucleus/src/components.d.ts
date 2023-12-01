@@ -6,56 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface NucleusButton {
         /**
-          * The first name
+          * Four button choices are: primary, callToAction, outline, and text
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "buttontype": 'primary' | 'callToAction' | 'outline' | 'text';
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLNucleusButtonElement extends Components.NucleusButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLNucleusButtonElement: {
+        prototype: HTMLNucleusButtonElement;
+        new (): HTMLNucleusButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "nucleus-button": HTMLNucleusButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface NucleusButton {
         /**
-          * The first name
+          * Four button choices are: primary, callToAction, outline, and text
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "buttontype"?: 'primary' | 'callToAction' | 'outline' | 'text';
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "nucleus-button": NucleusButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "nucleus-button": LocalJSX.NucleusButton & JSXBase.HTMLAttributes<HTMLNucleusButtonElement>;
         }
     }
 }

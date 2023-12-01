@@ -8,16 +8,16 @@ import { Components } from 'nucleus';
 
 
 @ProxyCmp({
-  inputs: ['first', 'last', 'middle']
+  inputs: ['buttontype']
 })
 @Component({
-  selector: 'my-component',
+  selector: 'nucleus-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['first', 'last', 'middle'],
+  inputs: ['buttontype'],
 })
-export class MyComponent {
+export class NucleusButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
@@ -26,6 +26,6 @@ export class MyComponent {
 }
 
 
-export declare interface MyComponent extends Components.MyComponent {}
+export declare interface NucleusButton extends Components.NucleusButton {}
 
 

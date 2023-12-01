@@ -2,10 +2,10 @@ import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core
 import { DIRECTIVES } from './nucleus-ng-component-library';
 import { defineCustomElements } from 'nucleus/loader';
 
-import { MyComponent } from './nucleus-ng-component-library/proxies';
+import { NucleusButton } from './nucleus-ng-component-library/proxies';
 
 const DECLARATIONS = [
-    MyComponent
+    NucleusButton
 ];
 
 @NgModule({

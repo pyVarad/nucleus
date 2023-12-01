@@ -7,4 +7,4 @@ import type { JSX } from 'nucleus';
 
 
 
-export const MyComponent = /*@__PURE__*/createReactComponent<JSX.MyComponent, HTMLMyComponentElement>('my-component');
+export const NucleusButton = /*@__PURE__*/createReactComponent<JSX.NucleusButton, HTMLNucleusButtonElement>('nucleus-button');
