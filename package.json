@@ -5,7 +5,8 @@
   "scripts": {
     "build": "nx run-many -t build",
     "dev-react": "nx dev nucleus-react-consumer",
-    "dev-angular": "nx start nucleus-angular-consumer"
+    "dev-angular": "nx start nucleus-angular-consumer",
+    "dev-sb-react": "nx storybook sb-nucleus-react"
   },
   "private": true,
   "devDependencies": {
