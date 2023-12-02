@@ -10,7 +10,7 @@ export const Button: React.FC = ({ ...props }) => {
   const buttonProperties = props;
   console.log(buttonProperties);
   return (
-    <NucleusButton buttontype='outline'>Button</NucleusButton>
+    <NucleusButton buttontype='callToAction'>Button</NucleusButton>
   );
 };
 
