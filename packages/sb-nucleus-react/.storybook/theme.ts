@@ -3,7 +3,7 @@ import CoverImage from '../src/assets/img/logo.png';
 
 export default create({
     base: 'light',
-    brandTitle: 'Nucleus - Angular',
+    brandTitle: 'Nucleus - React Components',
     brandUrl: 'https://github.com/geromegrignon/angular-material-storybook',
     brandImage: CoverImage,
     brandTarget: '_self',

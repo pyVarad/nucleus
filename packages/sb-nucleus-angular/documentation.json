@@ -356,7 +356,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        declarations: [NucleusButton],\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: { inlineStories: true },\n    direction: 'ltr',\n    layout: 'fullscreen',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        declarations: [NucleusButton],\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: {\n      story: {\n        inline: true\n      }\n    },\n    direction: 'ltr',\n    layout: 'fullscreen',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
             },
             {
                 "name": "proxyInputs",
@@ -396,7 +396,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryObj",
-                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>label-button</nucleus-button>\n    `,\n  }),\n  name: 'basic usage',\n}"
+                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    `,\n  }),\n  name: 'basic usage',\n}"
             }
         ],
         "functions": [
@@ -473,7 +473,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        declarations: [NucleusButton],\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: { inlineStories: true },\n    direction: 'ltr',\n    layout: 'fullscreen',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        declarations: [NucleusButton],\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: {\n      story: {\n        inline: true\n      }\n    },\n    direction: 'ltr',\n    layout: 'fullscreen',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
                 }
             ],
             "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
@@ -563,7 +563,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StoryObj",
-                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>label-button</nucleus-button>\n    `,\n  }),\n  name: 'basic usage',\n}"
+                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    `,\n  }),\n  name: 'basic usage',\n}"
                 }
             ]
         },

@@ -4,7 +4,6 @@ import docJson from "../documentation.json";
 import { CommonModule } from "@angular/common";
 import { enableProdMode } from "@angular/core";
 import { NucleusButton, NucleusComponentLibraryModule } from "nucleus-ng-component-library";
-import { defineCustomElement } from "../../nucleus-angular/dist/nucleus-ng-component-library/lib/nucleus-ng-component-library/angular-component-lib/utils";
 import { defineCustomElements } from "nucleus/loader";
 
 setCompodocJson(docJson);
