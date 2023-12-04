@@ -23,7 +23,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-d68608d8b26abf8ee892678b13d3f3fad388b8ed25e6510720354677fdc608c0a617ac19ba8cac9b7f59a76270d9da07ca862a43ca3c875eae5f81564cbc4b12",
+            "id": "component-AppComponent-34693d856cf40579244cdd759a5b737752603e47e0c237507ddc350e2a33953d0753e13c4279a2ab9b1ec47987448d897fcf8d5a421c4fca19d32e51af80ae7c",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -45,7 +45,7 @@
             "propertiesClass": [
                 {
                     "name": "title",
-                    "defaultValue": "'taskbox'",
+                    "defaultValue": "'sb-nucleus-angular'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
@@ -64,7 +64,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css'],\n})\nexport class AppComponent {\n  title = 'taskbox';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css'],\n})\nexport class AppComponent {\n  title = 'sb-nucleus-angular';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -77,165 +77,21 @@
             "templateData": "<nucleus-button buttontype=\"primary\">Primary</nucleus-button>\n<nucleus-button buttontype=\"callToAction\">CallToAction</nucleus-button>\n<nucleus-button buttontype=\"outline\">Outline</nucleus-button>\n<nucleus-button buttontype=\"text\">Text</nucleus-button>"
         },
         {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-cbd706e21ba22a60de4a2f0e0a54514bd9eee842c475525780188488fc10b92a935d540a6132f2d6d9f338e98fefee3ed9a0cfbb066e52c6f13a2fb3b546880d",
-            "file": "src/stories/button.component.ts",
+            "name": "NucleusButton",
+            "id": "component-NucleusButton-ea555bf77a8077340f468fe160932e493c5ec9caeaf09664106b6294c189f318d19dc4f15b0c726922b857fc3489cb6806e8b78cd03f2f2cf04de42dc8a03fe0",
+            "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
-            "inputs": [],
+            "inputs": [
+                "buttontype"
+            ],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
+            "selector": "nucleus-button",
+            "styleUrls": [],
             "styles": [],
-            "template": "<nucleus-button buttontype=\"primary\">Button</nucleus-button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "buttonType",
-                    "defaultValue": "'primary'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 18,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 21,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "NucleusComponentLibraryModule",
-                    "type": "component"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\nimport { NucleusComponentLibraryModule } from 'nucleus-ng-component-library';\n\n@Component({\n  selector: 'storybook-button',\n  standalone: true,\n  schemas: [CUSTOM_ELEMENTS_SCHEMA],\n  template: `<nucleus-button buttontype=\"primary\">Button</nucleus-button>`,\n  imports: [NucleusComponentLibraryModule],\n  styleUrls: ['./button.css']\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  buttonType: string = 'primary';\n\n  @Input()\n  label = 'Button';\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": []
-        },
-        {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-a71f246366d5d3dd2485d220bc2c384ceb3f056eb50faded8ff9e4a6404ca4a28c23117da4b98825de8da482bc2ba3b9abeab416745b32d1a89f68595d2dc939",
-            "file": "src/stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 65,
-                    "type": "User | null",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 74,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 68,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 71,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": []
-        },
-        {
-            "name": "PageComponent",
-            "id": "component-PageComponent-f5d2fd9ba0ee70c24f514ef21ebdae50beb2e2f42594802a96cdbeb02a59371897162b6be17fcb45cdc0d237d3e4bee611d1ad1d446a54e0699ba35b48991b87",
-            "file": "src/stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "template": "<ng-content></ng-content>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -243,48 +99,19 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "user",
-                    "defaultValue": "null",
+                    "name": "el",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "User | null",
+                    "type": "HTMLElement",
                     "optional": false,
                     "description": "",
-                    "line": 64
+                    "line": 21,
+                    "modifierKind": [
+                        124
+                    ]
                 }
             ],
-            "methodsClass": [
-                {
-                    "name": "doCreateAccount",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 74,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogin",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 70,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogout",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -294,16 +121,69 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';\n\nimport { ProxyCmp } from './angular-component-lib/utils';\n\nimport { Components } from 'nucleus';\n\n\n@ProxyCmp({\n  inputs: ['buttontype']\n})\n@Component({\n  selector: 'nucleus-button',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: ['buttontype'],\n})\nexport class NucleusButton {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusButton extends Components.NucleusButton {}\n\n\n",
             "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
+            "styleUrlsData": "",
             "stylesData": "",
-            "extends": []
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "c",
+                        "type": "ChangeDetectorRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "r",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "z",
+                        "type": "NgZone",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 21,
+                "jsdoctags": [
+                    {
+                        "name": "c",
+                        "type": "ChangeDetectorRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "r",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "z",
+                        "type": "NgZone",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [
+                "Components.NucleusButton"
+            ]
         }
     ],
     "modules": [
@@ -350,10 +230,104 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "NucleusComponentLibraryModule",
+            "id": "module-NucleusComponentLibraryModule-4774e1c1fc81ca3d062ef5dc179a8b8255f1094f497a3e999370e997d461353a54872417c444591feabe0243d568f4ab7f4fcb3423dcc7f85cce2cb766b27b98",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+            "methods": [],
+            "sourceCode": "import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\nimport { DIRECTIVES } from './nucleus-ng-component-library';\nimport { defineCustomElements } from 'nucleus/loader';\n\nimport { NucleusButton } from './nucleus-ng-component-library/proxies';\n\nconst DECLARATIONS = [\n    NucleusButton\n];\n\n@NgModule({\n    declarations: [DECLARATIONS],\n    exports: [DECLARATIONS],\n    providers: [\n        {\n            provide: APP_INITIALIZER,\n            useFactory: () => defineCustomElements,\n            multi: true\n        },\n    ],\n    schemas: [CUSTOM_ELEMENTS_SCHEMA]\n})\nexport class NucleusComponentLibraryModule { }",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "NucleusButton"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "NucleusButton"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "badgeArgtypes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/button.args.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  matBadge: {\n    description: 'The content for the badge',\n    defaultValue: 'Button',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: { summary: 'Button' },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  nucleusButtonType: {\n    description: 'Type of Button',\n    defaultValue: 'primary',\n    table: {\n      defaultValue: { summary: 'primary' },\n    },\n    control: 'select',\n    options: [\n      'primary'\n    ]\n  }\n}"
+            },
+            {
+                "name": "DECLARATIONS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n    NucleusButton\n]"
+            },
+            {
+                "name": "decorators",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  componentWrapperDecorator((story) => `<div class=\"mat-app-background\">${story}</div>`),\n]"
+            },
+            {
+                "name": "defineCustomElement",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(tagName: string, customElement: any) => {\n  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {\n    customElements.define(tagName, customElement);\n  }\n}"
+            },
+            {
+                "name": "DIRECTIVES",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  d.NucleusButton\n]"
+            },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
@@ -375,76 +349,6 @@
                 "defaultValue": "{\n  production: false,\n}"
             },
             {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Button>",
-                "defaultValue": "{\n  title: 'Nucleus/Button',\n  component: Button,\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule],\n      schemas: [CUSTOM_ELEMENTS_SCHEMA]\n    }),\n    componentWrapperDecorator(\n      (story) => `<div>${story}</div>`\n    ),\n  ],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    }\n  })\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Header>",
-                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<Page>",
-                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
-            },
-            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -452,57 +356,180 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Preview",
-                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        declarations: [NucleusButton],\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: { inlineStories: true },\n    direction: 'ltr',\n    layout: 'fullscreen',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
             },
             {
-                "name": "Primary",
+                "name": "proxyInputs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(Cmp: any, inputs: string[]) => {\n  const Prototype = Cmp.prototype;\n  inputs.forEach((item) => {\n    Object.defineProperty(Prototype, item, {\n      get() {\n        return this.el[item];\n      },\n      set(val: any) {\n        this.z.runOutsideAngular(() => (this.el[item] = val));\n      },\n      /**\n       * In the event that proxyInputs is called\n       * multiple times re-defining these inputs\n       * will cause an error to be thrown. As a result\n       * we set configurable: true to indicate these\n       * properties can be changed.\n       */\n      configurable: true,\n    });\n  });\n}"
+            },
+            {
+                "name": "proxyMethods",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(Cmp: any, methods: string[]) => {\n  const Prototype = Cmp.prototype;\n  methods.forEach((methodName) => {\n    Prototype[methodName] = function () {\n      const args = arguments;\n      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));\n    };\n  });\n}"
+            },
+            {
+                "name": "proxyOutputs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(instance: any, el: any, events: string[]) => {\n  events.forEach((eventName) => (instance[eventName] = fromEvent(el, eventName)));\n}"
+            },
+            {
+                "name": "WithBasicUsage",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    buttonType: 'primary',\n    label: 'Button',\n  },\n}"
+                "type": "StoryObj",
+                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>label-button</nucleus-button>\n    `,\n  }),\n  name: 'basic usage',\n}"
             }
         ],
-        "functions": [],
-        "typealiases": [
+        "functions": [
             {
-                "name": "Story",
+                "name": "ProxyCmp",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
                 "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Button>",
-                "file": "src/stories/Button.stories.ts",
+                "subtype": "function",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Header>",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<Page>",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
+                "args": [
+                    {
+                        "name": "opts",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "opts",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             }
         ],
+        "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/button.args.ts": [
+                {
+                    "name": "badgeArgtypes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button.args.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  matBadge: {\n    description: 'The content for the badge',\n    defaultValue: 'Button',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: { summary: 'Button' },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  nucleusButtonType: {\n    description: 'Type of Button',\n    defaultValue: 'primary',\n    table: {\n      defaultValue: { summary: 'primary' },\n    },\n    control: 'select',\n    options: [\n      'primary'\n    ]\n  }\n}"
+                }
+            ],
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts": [
+                {
+                    "name": "DECLARATIONS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n    NucleusButton\n]"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "decorators",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  componentWrapperDecorator((story) => `<div class=\"mat-app-background\">${story}</div>`),\n]"
+                },
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        declarations: [NucleusButton],\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: { inlineStories: true },\n    direction: 'ltr',\n    layout: 'fullscreen',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                }
+            ],
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
+                {
+                    "name": "defineCustomElement",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(tagName: string, customElement: any) => {\n  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {\n    customElements.define(tagName, customElement);\n  }\n}"
+                },
+                {
+                    "name": "proxyInputs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(Cmp: any, inputs: string[]) => {\n  const Prototype = Cmp.prototype;\n  inputs.forEach((item) => {\n    Object.defineProperty(Prototype, item, {\n      get() {\n        return this.el[item];\n      },\n      set(val: any) {\n        this.z.runOutsideAngular(() => (this.el[item] = val));\n      },\n      /**\n       * In the event that proxyInputs is called\n       * multiple times re-defining these inputs\n       * will cause an error to be thrown. As a result\n       * we set configurable: true to indicate these\n       * properties can be changed.\n       */\n      configurable: true,\n    });\n  });\n}"
+                },
+                {
+                    "name": "proxyMethods",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(Cmp: any, methods: string[]) => {\n  const Prototype = Cmp.prototype;\n  methods.forEach((methodName) => {\n    Prototype[methodName] = function () {\n      const args = arguments;\n      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));\n    };\n  });\n}"
+                },
+                {
+                    "name": "proxyOutputs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(instance: any, el: any, events: string[]) => {\n  events.forEach((eventName) => (instance[eventName] = fromEvent(el, eventName)));\n}"
+                }
+            ],
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts": [
+                {
+                    "name": "DIRECTIVES",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  d.NucleusButton\n]"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -527,154 +554,67 @@
                     "defaultValue": "{\n  production: false,\n}"
                 }
             ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Header>",
-                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = await canvas.getByRole('button', {\n      name: /Log in/i,\n    });\n    await userEvent.click(loginButton);\n  },\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Page>",
-                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
-                }
-            ],
             "src/stories/Button.stories.ts": [
                 {
-                    "name": "meta",
+                    "name": "WithBasicUsage",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<Button>",
-                    "defaultValue": "{\n  title: 'Nucleus/Button',\n  component: Button,\n  tags: ['autodocs'],\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [CommonModule],\n      schemas: [CUSTOM_ELEMENTS_SCHEMA]\n    }),\n    componentWrapperDecorator(\n      (story) => `<div>${story}</div>`\n    ),\n  ],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    }\n  })\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    buttonType: 'primary',\n    label: 'Button',\n  },\n}"
-                }
-            ],
-            ".storybook/preview.ts": [
-                {
-                    "name": "preview",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": ".storybook/preview.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Preview",
-                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                    "type": "StoryObj",
+                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>label-button</nucleus-button>\n    `,\n  }),\n  name: 'basic usage',\n}"
                 }
             ]
         },
-        "groupedFunctions": {},
-        "groupedEnumerations": {},
-        "groupedTypeAliases": {
-            "src/stories/Button.stories.ts": [
+        "groupedFunctions": {
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
                 {
-                    "name": "Story",
+                    "name": "ProxyCmp",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
                     "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Button>",
-                    "file": "src/stories/Button.stories.ts",
+                    "subtype": "function",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Header>",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "src/stories/Page.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<Page>",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
+                    "args": [
+                        {
+                            "name": "opts",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "opts",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ]
-        }
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
     },
     "routes": [],
     "coverage": {
-        "count": 2,
+        "count": 0,
         "status": "low",
         "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "decorators",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
             {
                 "filePath": ".storybook/preview.ts",
                 "type": "variable",
@@ -683,6 +623,85 @@
                 "name": "preview",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DECLARATIONS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "ProxyCmp",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defineCustomElement",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "proxyInputs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "proxyMethods",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "proxyOutputs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DIRECTIVES",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NucleusButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -719,77 +738,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
+                "name": "WithBasicUsage",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -804,30 +753,13 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 33,
-                "coverageCount": "1/3",
-                "status": "medium"
-            },
-            {
-                "filePath": "src/stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
+                "filePath": "src/stories/button.args.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "badgeArgtypes",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
                 "status": "low"
             }
         ]
