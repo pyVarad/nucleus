@@ -15,7 +15,6 @@ const preview: Preview = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     decorator: [
       moduleMetadata({
-        declarations: [NucleusButton],
         providers: [],
         imports: [CommonModule, NucleusComponentLibraryModule]
       })
@@ -27,7 +26,6 @@ const preview: Preview = {
       }
     },
     direction: 'ltr',
-    layout: 'fullscreen',
     backgrounds: { disable: true },
     controls: {
       matchers: {
@@ -39,7 +37,7 @@ const preview: Preview = {
 };
 
 export const decorators = [
-  componentWrapperDecorator((story) => `<div class="mat-app-background">${story}</div>`),
+  componentWrapperDecorator((story) => `<div class="nucleus-container">${story}</div>`),
 ];
 
 export default preview;
