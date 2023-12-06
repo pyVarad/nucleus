@@ -1,18 +1,122 @@
 import { proxyCustomElement, HTMLElement, h } from '@stencil/core/internal/client';
+import { S as StyledHost } from './styledHost.js';
 
-const nucleusButtonCss = "button{border:none;cursor:pointer;border-style:solid;border-radius:0px;padding:0 15px 0 15px;min-width:64px;height:36px;outline:0;font-weight:500;font-family:'Roboto', sans-serif;font-size:13px;position:relative;overflow:hidden}.primary{background-color:#F7F7FB;border-color:#C7D4DD;border-width:1px;color:#57657A}.primary:hover{background-color:#DDDDE1}.primary:active{background-color:#C5C5C8;background-size:100%;transition:background 0s}.callToAction{background-color:#508BE4;border-color:#508BE4;border-width:1px;color:#FFFF}.callToAction:hover{background-color:#4476C2}.callToAction:active{background-color:#37619F;background-size:100%;transition:background 0s}.outline{background-color:#FFFFFF;border-color:#508BE4;border-width:1px;color:#508BE4}.outline:hover{background-color:#EDF3FC}.outline:active{background-color:#DCE8FA;background-size:100%;transition:background 0s}.text{background-color:#FFFFFF;border-width:0px;color:#508BE4}.text:hover{background-color:#EDF3FC}.text:active{background-color:#DCE8FA;background-size:100%;transition:background 0s}";
+function createCommonjsModule(fn, basedir, module) {
+	return module = {
+		path: basedir,
+		exports: {},
+		require: function (path, base) {
+			return commonjsRequire();
+		}
+	}, fn(module, module.exports), module.exports;
+}
+
+function commonjsRequire () {
+	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
+}
+
+var classnames = createCommonjsModule(function (module) {
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames() {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				if (arg.length) {
+					var inner = classNames.apply(null, arg);
+					if (inner) {
+						classes.push(inner);
+					}
+				}
+			} else if (argType === 'object') {
+				if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+					classes.push(arg.toString());
+					continue;
+				}
+
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else {
+		window.classNames = classNames;
+	}
+}());
+});
 
 const NucleusButton$1 = /*@__PURE__*/ proxyCustomElement(class NucleusButton extends HTMLElement {
     constructor() {
         super();
         this.__registerHost();
         this.__attachShadow();
-        this.buttontype = "primary";
+        this.default = classnames({
+            'text-white': true,
+            'bg-blue-700': true,
+            'hover:bg-blue-800': true,
+            'focus:ring-4': true,
+            'focus:ring-blue-300': true,
+            'font-medium': true,
+            'rounded-lg': true,
+            'text-sm': true,
+            'px-5': true,
+            'py-2.5': true,
+            'me-2': true,
+            'mb-2': true,
+            'dark:bg-blue-600': true,
+            'dark:hover:bg-blue-700': true,
+            'focus:outline-none': true,
+            'dark:focus:ring-blue-800': true,
+            'text-gray-900': this.buttontype === 'light',
+            'bg-white': this.buttontype === 'light',
+            'border': this.buttontype === 'light',
+            'border-gray-200': this.buttontype === 'light',
+            'hover:bg-gray-100': this.buttontype === 'light',
+            'hover:text-blue-700': this.buttontype === 'light',
+            'focus:z-10': this.buttontype === 'light',
+            'focus:ring-gray-200': this.buttontype === 'light',
+            'dark:focus:ring-gray-700': this.buttontype === 'light',
+            'dark:bg-gray-800': this.buttontype === 'light',
+            'dark:text-gray-400': this.buttontype === 'light',
+            'dark:border-gray-600': this.buttontype === 'light',
+            'dark:hover:text-white': this.buttontype === 'light',
+            'dark:hover:bg-gray-700': this.buttontype === 'light',
+            'bg-gray-800': this.buttontype === 'dark',
+            'hover:bg-gray-900': this.buttontype === 'dark',
+            'focus:ring-gray-300': this.buttontype === 'dark',
+            'dark:border-gray-700': this.buttontype === 'dark'
+        });
+        this.buttontype = 'default';
     }
     render() {
-        return (h("button", { class: this.buttontype }, h("slot", null)));
+        return (h(StyledHost, null, h("button", { type: "button", class: this.default }, h("slot", null))));
     }
-    static get style() { return nucleusButtonCss; }
 }, [1, "nucleus-button", {
         "buttontype": [1]
     }]);

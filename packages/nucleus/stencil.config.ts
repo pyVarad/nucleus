@@ -5,6 +5,7 @@ import { angularOutputTarget } from '@stencil/angular-output-target';
 export const config: Config = {
   namespace: 'nucleus',
   taskQueue: 'async',
+  globalStyle: './src/styles/tailwind.css',
   outputTargets: [
     {
       type: 'dist',
@@ -23,5 +24,5 @@ export const config: Config = {
       outputType: 'component',
       directivesProxyFile: '../nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts',
     })
-  ],
+  ]
 };
