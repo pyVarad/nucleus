@@ -6,10 +6,9 @@ defineCustomElements();
 function App() {
   return (
     <div className="App">
-      <NucleusButton buttontype='primary'>Primary Button</NucleusButton>
-      <NucleusButton buttontype='callToAction'>Call to Action</NucleusButton>
-      <NucleusButton buttontype='outline'>Outline</NucleusButton>
-      <NucleusButton buttontype='text'>Text</NucleusButton>
+      <NucleusButton buttontype='default'>Default Button</NucleusButton>
+      <NucleusButton buttontype='light'>Light</NucleusButton>
+      <NucleusButton buttontype='dark'>Dark</NucleusButton>
     </div>
   );
 }

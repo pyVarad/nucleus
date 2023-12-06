@@ -29,3 +29,24 @@ export class NucleusButton {
 export declare interface NucleusButton extends Components.NucleusButton {}
 
 
+@ProxyCmp({
+})
+@Component({
+  selector: 'nucleus-tw-component',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class NucleusTwComponent {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface NucleusTwComponent extends Components.NucleusTwComponent {}
+
+

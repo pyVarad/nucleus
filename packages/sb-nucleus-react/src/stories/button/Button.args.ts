@@ -14,21 +14,20 @@ export const buttonArgsType = {
   },
   buttontype: {
     description: 'Button Type',
-    defaultValue: 'primary',
+    defaultValue: 'default',
     table: {
       type: {
         summary: 'text'
       },
       defaultValue: {
-        summary: 'primary'
+        summary: 'default'
       },
     },
     control: 'select',
     options: [
-      'primary',
-      'callToAction',
-      'outline',
-      'text'
+      'default',
+      'light',
+      'dark'
     ]
   }
 }

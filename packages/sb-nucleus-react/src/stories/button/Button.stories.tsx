@@ -16,9 +16,8 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   render: (args) => {
     NucleusButton.displayName = 'NucleusButton';
-    const buttonType = args.buttontype || 'primary';
     const label: ReactNode = ('label' in args ? args.label : 'Primary') as ReactNode;
-    return <NucleusButton buttontype={buttonType}>{label}</NucleusButton>
+    return <NucleusButton buttontype={args.buttontype}> {label}</NucleusButton >
   }
 };
 
@@ -26,9 +25,8 @@ export const ButtonTypes: Story = {
   render: () => {
     NucleusButton.displayName = 'NucleusButton';
     return <div>
-      <NucleusButton buttontype='callToAction'>Call to action</NucleusButton>
-      <NucleusButton buttontype='outline'>Outline</NucleusButton>
-      <NucleusButton buttontype='text'>Text</NucleusButton>
+      <NucleusButton buttontype='light'>Call to action</NucleusButton>
+      <NucleusButton buttontype='dark'>Outline</NucleusButton>
     </div>
   }
 };

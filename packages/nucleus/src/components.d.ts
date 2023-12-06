@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface NucleusButton {
-        "buttontype": 'default' | 'dark' | 'light' | 'text';
+        "buttontype": 'default' | 'dark' | 'light';
     }
     interface NucleusTwComponent {
     }
@@ -32,7 +32,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface NucleusButton {
-        "buttontype"?: 'default' | 'dark' | 'light' | 'text';
+        "buttontype"?: 'default' | 'dark' | 'light';
     }
     interface NucleusTwComponent {
     }

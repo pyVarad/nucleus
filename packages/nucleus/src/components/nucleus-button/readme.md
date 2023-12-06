@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type                                       | Default     |
-| ------------ | ------------ | ----------- | ------------------------------------------ | ----------- |
-| `buttontype` | `buttontype` |             | `"dark" \| "default" \| "light" \| "text"` | `'default'` |
+| Property     | Attribute    | Description | Type                             | Default     |
+| ------------ | ------------ | ----------- | -------------------------------- | ----------- |
+| `buttontype` | `buttontype` |             | `"dark" \| "default" \| "light"` | `'default'` |
 
 
 ----------------------------------------------
