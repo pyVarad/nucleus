@@ -19,30 +19,16 @@ export const Primary: Story = {
     const buttonType = args.buttontype || 'primary';
     const label: ReactNode = ('label' in args ? args.label : 'Primary') as ReactNode;
     return <NucleusButton buttontype={buttonType}>{label}</NucleusButton>
-
   }
 };
 
-export const callToAction: Story = {
-  args: {
-    ...Primary.args,
-    buttontype: 'callToAction'
-  },
-  name: 'CallToAction',
-};
-
-export const outline: Story = {
-  args: {
-    ...Primary.args,
-    buttontype: 'outline'
-  },
-  name: 'Outline',
-};
-
-export const text: Story = {
-  args: {
-    ...Primary.args,
-    buttontype: 'text'
-  },
-  name: 'Text',
+export const ButtonTypes: Story = {
+  render: () => {
+    NucleusButton.displayName = 'NucleusButton';
+    return <div>
+      <NucleusButton buttontype='callToAction'>Call to action</NucleusButton>
+      <NucleusButton buttontype='outline'>Outline</NucleusButton>
+      <NucleusButton buttontype='text'>Outline</NucleusButton>
+    </div>
+  }
 };

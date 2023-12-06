@@ -8,6 +8,17 @@ const preview = {
     actions: { argTypesRegex: "^on[A-Z].*" },
     viewMode: 'story',
     direction: 'ltr',
+    docs: {
+      source: {
+        transform: (code: string) => {
+          return code
+            .replace(/^.*render|{|}|:|\(|\).*$\n/gm, "")
+            .replace(/(.*displayName.*)/gm, "")
+            .replace(/(.*div.*)/gm, "")
+            .replace(/^ {2,}/gm, "");
+        }
+      }
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
