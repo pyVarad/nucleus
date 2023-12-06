@@ -28,7 +28,7 @@ export const ButtonTypes: Story = {
     return <div>
       <NucleusButton buttontype='callToAction'>Call to action</NucleusButton>
       <NucleusButton buttontype='outline'>Outline</NucleusButton>
-      <NucleusButton buttontype='text'>Outline</NucleusButton>
+      <NucleusButton buttontype='text'>Text</NucleusButton>
     </div>
   }
 };
