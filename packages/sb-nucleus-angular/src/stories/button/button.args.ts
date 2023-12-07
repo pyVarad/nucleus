@@ -14,20 +14,53 @@ export const buttonArgsType = {
   },
   buttontype: {
     description: 'Button Type',
-    defaultValue: 'default',
+    defaultValue: 'primary',
     table: {
       type: {
         summary: 'text'
       },
       defaultValue: {
-        summary: 'default'
+        summary: 'primary'
       },
     },
     control: 'select',
     options: [
-      'default',
-      'light',
-      'dark'
+      'primary',
+      'secondary'
     ]
-  }
+  },
+  disabled: {
+    description: 'disabled',
+    defaultValue: false,
+    table: {
+      type: {
+        summary: 'boolean'
+      },
+      defaultValue: {
+        summary: false
+      },
+    },
+    control: 'radio',
+    options: [
+      true,
+      false
+    ]
+  },
+  rounded: {
+    description: 'Rounded',
+    defaultValue: false,
+    table: {
+      type: {
+        summary: 'boolean'
+      },
+      defaultValue: {
+        summary: 'rounded'
+      },
+    },
+    control: 'radio',
+    options: [
+      true,
+      false
+    ]
+  },
 }

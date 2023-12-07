@@ -17,7 +17,7 @@ export const Primary: Story = {
   render: (args) => {
     NucleusButton.displayName = 'NucleusButton';
     const label: ReactNode = ('label' in args ? args.label : 'Primary') as ReactNode;
-    return <NucleusButton buttontype={args.buttontype}> {label}</NucleusButton >
+    return <NucleusButton buttontype={args.buttontype} rounded={args.rounded} disabled={args.disabled}> {label}</NucleusButton >
   }
 };
 
@@ -25,8 +25,8 @@ export const ButtonTypes: Story = {
   render: () => {
     NucleusButton.displayName = 'NucleusButton';
     return <div>
-      <NucleusButton buttontype='light'>Call to action</NucleusButton>
-      <NucleusButton buttontype='dark'>Outline</NucleusButton>
+      <NucleusButton buttontype='primary'>Call to action</NucleusButton>
+      <NucleusButton buttontype='secondary'>Outline</NucleusButton>
     </div>
   }
 };

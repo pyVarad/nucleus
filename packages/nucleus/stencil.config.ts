@@ -12,7 +12,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 export const config: Config = {
   namespace: 'nucleus',
   taskQueue: 'async',
-  globalStyle: './src/styles/tailwind.css',
+  globalStyle: './src/styles/styles.css',
   outputTargets: [
     {
       type: 'dist',

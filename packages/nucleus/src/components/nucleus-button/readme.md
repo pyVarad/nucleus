@@ -7,9 +7,11 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type                             | Default     |
-| ------------ | ------------ | ----------- | -------------------------------- | ----------- |
-| `buttontype` | `buttontype` |             | `"dark" \| "default" \| "light"` | `'default'` |
+| Property     | Attribute    | Description | Type                       | Default     |
+| ------------ | ------------ | ----------- | -------------------------- | ----------- |
+| `buttontype` | `buttontype` |             | `"primary" \| "secondary"` | `'primary'` |
+| `disabled`   | `disabled`   |             | `boolean`                  | `false`     |
+| `rounded`    | `rounded`    |             | `boolean`                  | `false`     |
 
 
 ----------------------------------------------
