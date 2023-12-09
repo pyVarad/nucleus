@@ -1,4 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
+import classNames from 'classnames';
 
 @Component({
   tag: 'nucleus-button',
@@ -6,16 +7,28 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true
 })
 export class NucleusButton {
-  /**
-   * Four button choices are: primary, callToAction, outline, and text
-   */
-  @Prop() buttontype: 'primary' | 'callToAction' | 'outline' | 'text' = "primary";
+  @Prop() buttontype: 'primary' | 'secondary' = 'primary';
+
+  @Prop() rounded: true | false = false;
+
+  @Prop() disabled: true | false = false;
+
+  @Prop() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
 
   render() {
     return (
-      <button class={this.buttontype}>
+      <button
+        type='button'
+        class={
+          classNames('btn', {
+            [`btn-${this.buttontype}`]: true,
+            'rounded': this.rounded,
+            'disabled': this.disabled,
+            [`btn-${this.size}`]: true
+          })
+        } >
         <slot />
-      </button>
+      </button >
     );
   }
 }

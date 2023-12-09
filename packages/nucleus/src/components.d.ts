@@ -7,10 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface NucleusButton {
-        /**
-          * Four button choices are: primary, callToAction, outline, and text
-         */
-        "buttontype": 'primary' | 'callToAction' | 'outline' | 'text';
+        "buttontype": 'primary' | 'secondary';
+        "disabled": true | false;
+        "rounded": true | false;
+        "size": 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 }
 declare global {
@@ -26,10 +26,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface NucleusButton {
-        /**
-          * Four button choices are: primary, callToAction, outline, and text
-         */
-        "buttontype"?: 'primary' | 'callToAction' | 'outline' | 'text';
+        "buttontype"?: 'primary' | 'secondary';
+        "disabled"?: true | false;
+        "rounded"?: true | false;
+        "size"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
     interface IntrinsicElements {
         "nucleus-button": NucleusButton;

@@ -7,9 +7,12 @@
 
 ## Properties
 
-| Property     | Attribute    | Description                                                       | Type                                                 | Default     |
-| ------------ | ------------ | ----------------------------------------------------------------- | ---------------------------------------------------- | ----------- |
-| `buttontype` | `buttontype` | Four button choices are: primary, callToAction, outline, and text | `"callToAction" \| "outline" \| "primary" \| "text"` | `"primary"` |
+| Property     | Attribute    | Description | Type                                   | Default     |
+| ------------ | ------------ | ----------- | -------------------------------------- | ----------- |
+| `buttontype` | `buttontype` |             | `"primary" \| "secondary"`             | `'primary'` |
+| `disabled`   | `disabled`   |             | `boolean`                              | `false`     |
+| `rounded`    | `rounded`    |             | `boolean`                              | `false`     |
+| `size`       | `size`       |             | `"lg" \| "md" \| "sm" \| "xl" \| "xs"` | `'md'`      |
 
 
 ----------------------------------------------

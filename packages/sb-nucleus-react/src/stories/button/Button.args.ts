@@ -26,9 +26,61 @@ export const buttonArgsType = {
     control: 'select',
     options: [
       'primary',
-      'callToAction',
-      'outline',
-      'text'
+      'secondary'
     ]
-  }
+  },
+  disabled: {
+    description: 'disabled',
+    defaultValue: false,
+    table: {
+      type: {
+        summary: 'boolean'
+      },
+      defaultValue: {
+        summary: false
+      },
+    },
+    control: 'radio',
+    options: [
+      true,
+      false
+    ]
+  },
+  rounded: {
+    description: 'Rounded',
+    defaultValue: false,
+    table: {
+      type: {
+        summary: 'boolean'
+      },
+      defaultValue: {
+        summary: 'rounded'
+      },
+    },
+    control: 'radio',
+    options: [
+      true,
+      false
+    ]
+  },
+  size: {
+    description: 'Size',
+    defaultValue: 'md',
+    table: {
+      type: {
+        summary: 'text'
+      },
+      defaultValue: {
+        summary: 'md'
+      },
+    },
+    control: 'select',
+    options: [
+      'xs',
+      'sm',
+      'md',
+      'lg',
+      'xl'
+    ]
+  },
 }

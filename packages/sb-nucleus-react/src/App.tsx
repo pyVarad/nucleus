@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { NucleusButton, defineCustomElements } from 'nucleus-react';
 
 defineCustomElements();
@@ -6,10 +6,9 @@ defineCustomElements();
 function App() {
   return (
     <div className="App">
-      <NucleusButton buttontype='primary'>Primary Button</NucleusButton>
-      <NucleusButton buttontype='callToAction'>Call to Action</NucleusButton>
-      <NucleusButton buttontype='outline'>Outline</NucleusButton>
-      <NucleusButton buttontype='text'>Text</NucleusButton>
+      <NucleusButton buttontype='primary'>Primary</NucleusButton>
+      <NucleusButton buttontype='secondary'>Secondary</NucleusButton>
+      <NucleusButton buttontype='primary' rounded>Primary Rounded</NucleusButton>
     </div>
   );
 }
