@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import { OverlayEventDetail } from './interfaces';
-import { StencilReactForwardedRef, attachProps, dashToPascalCase, defineCustomElement, setRef } from './utils';
+import { OverlayEventDetail } from "./interfaces";
+import { StencilReactForwardedRef, attachProps, dashToPascalCase, defineCustomElement, setRef } from "./utils";
 
 interface OverlayElement extends HTMLElement {
   present: () => Promise<void>;
@@ -21,7 +21,7 @@ export interface ReactOverlayProps {
 export const createOverlayComponent = <OverlayComponent extends object, OverlayType extends OverlayElement>(
   tagName: string,
   controller: { create: (options: any) => Promise<OverlayType> },
-  customElement?: any
+  customElement?: any,
 ) => {
   defineCustomElement(tagName, customElement);
 
@@ -44,8 +44,8 @@ export const createOverlayComponent = <OverlayComponent extends object, OverlayT
 
     constructor(props: Props) {
       super(props);
-      if (typeof document !== 'undefined') {
-        this.el = document.createElement('div');
+      if (typeof document !== "undefined") {
+        this.el = document.createElement("div");
       }
       this.handleDismiss = this.handleDismiss.bind(this);
     }

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build nucleus-ng-component-library",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "format": "npx @biomejs/biome format \"projects\" --write"
   },
   "private": true,
   "dependencies": {

@@ -1,6 +1,3 @@
+import * as d from "./proxies";
 
-import * as d from './proxies';
-
-export const DIRECTIVES = [
-  d.NucleusButton
-];
+export const DIRECTIVES = [d.NucleusButton];

@@ -1,19 +1,19 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { buttonArgsType } from './button.args';
+import { Meta, StoryObj } from "@storybook/angular";
+import { buttonArgsType } from "./button.args";
 
-export default {
-  title: 'components/Button',
+export default ({
+  title: "components/Button",
   argTypes: buttonArgsType,
   args: {
-    label: 'primary button'
+    label: "primary button",
   },
   parameters: {
     controls: {
       expanded: true,
-      exclude: ['mode'],
+      exclude: ["mode"],
     },
   },
-} as Meta;
+} as Meta);
 
 export const Primary: StoryObj = {
   render: (args) => ({
@@ -26,7 +26,7 @@ export const Primary: StoryObj = {
       [size]="size">{{label}} </nucleus-button>
     `,
   }),
-  name: 'Primary',
+  name: "Primary",
   parameters: {
     controls: {
       expanded: true,
@@ -45,5 +45,5 @@ export const buttonTypes: StoryObj = {
     <nucleus-button buttontype='secondary'>button</nucleus-button>
     `,
   }),
-  name: 'Button Types',
+  name: "Button Types",
 };

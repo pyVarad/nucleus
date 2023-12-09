@@ -1,23 +1,21 @@
-import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { DIRECTIVES } from './nucleus-ng-component-library';
-import { defineCustomElements } from 'nucleus/loader';
+import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
+import { DIRECTIVES } from "./nucleus-ng-component-library";
+import { defineCustomElements } from "nucleus/loader";
 
-import { NucleusButton } from './nucleus-ng-component-library/proxies';
+import { NucleusButton } from "./nucleus-ng-component-library/proxies";
 
-const DECLARATIONS = [
-    NucleusButton
-];
+const DECLARATIONS = [NucleusButton];
 
 @NgModule({
-    declarations: [DECLARATIONS],
-    exports: [DECLARATIONS],
-    providers: [
-        {
-            provide: APP_INITIALIZER,
-            useFactory: () => defineCustomElements,
-            multi: true
-        },
-    ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  declarations: [DECLARATIONS],
+  exports: [DECLARATIONS],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => defineCustomElements,
+      multi: true,
+    },
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class NucleusComponentLibraryModule { }
+export class NucleusComponentLibraryModule {}

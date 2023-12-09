@@ -7,7 +7,8 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "npm run tsc",
-    "tsc": "tsc -p . --outDir ./dist"
+    "tsc": "tsc -p . --outDir ./dist",
+    "format": "npx @biomejs/biome format \"lib\" --write"
   },
   "keywords": [],
   "author": "",

@@ -9,10 +9,10 @@
 
 | Property     | Attribute    | Description | Type                                   | Default     |
 | ------------ | ------------ | ----------- | -------------------------------------- | ----------- |
-| `buttontype` | `buttontype` |             | `"primary" \| "secondary"`             | `'primary'` |
+| `buttontype` | `buttontype` |             | `"primary" \| "secondary"`             | `"primary"` |
 | `disabled`   | `disabled`   |             | `boolean`                              | `false`     |
 | `rounded`    | `rounded`    |             | `boolean`                              | `false`     |
-| `size`       | `size`       |             | `"lg" \| "md" \| "sm" \| "xl" \| "xs"` | `'md'`      |
+| `size`       | `size`       |             | `"lg" \| "md" \| "sm" \| "xl" \| "xs"` | `"md"`      |
 
 
 ----------------------------------------------
