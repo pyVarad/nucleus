@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { NucleusButton, defineCustomElements } from 'nucleus-react';
 
 defineCustomElements();

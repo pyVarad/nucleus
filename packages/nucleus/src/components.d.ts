@@ -10,8 +10,7 @@ export namespace Components {
         "buttontype": 'primary' | 'secondary';
         "disabled": true | false;
         "rounded": true | false;
-    }
-    interface NucleusTwComponent {
+        "size": 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
 }
 declare global {
@@ -21,15 +20,8 @@ declare global {
         prototype: HTMLNucleusButtonElement;
         new (): HTMLNucleusButtonElement;
     };
-    interface HTMLNucleusTwComponentElement extends Components.NucleusTwComponent, HTMLStencilElement {
-    }
-    var HTMLNucleusTwComponentElement: {
-        prototype: HTMLNucleusTwComponentElement;
-        new (): HTMLNucleusTwComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "nucleus-button": HTMLNucleusButtonElement;
-        "nucleus-tw-component": HTMLNucleusTwComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -37,12 +29,10 @@ declare namespace LocalJSX {
         "buttontype"?: 'primary' | 'secondary';
         "disabled"?: true | false;
         "rounded"?: true | false;
-    }
-    interface NucleusTwComponent {
+        "size"?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
     }
     interface IntrinsicElements {
         "nucleus-button": NucleusButton;
-        "nucleus-tw-component": NucleusTwComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -50,7 +40,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "nucleus-button": LocalJSX.NucleusButton & JSXBase.HTMLAttributes<HTMLNucleusButtonElement>;
-            "nucleus-tw-component": LocalJSX.NucleusTwComponent & JSXBase.HTMLAttributes<HTMLNucleusTwComponentElement>;
         }
     }
 }

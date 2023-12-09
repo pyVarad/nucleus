@@ -22,6 +22,15 @@ export const config: Config = {
       type: 'dist-custom-elements',
       dir: 'components'
     },
+    {
+      type: 'dist',
+      copy: [
+        {
+          src: 'fonts',
+          warn: true
+        }
+      ]
+    },
     reactOutputTarget({
       componentCorePackage: 'nucleus',
       proxiesFile: '../nucleus-react/lib/components/react-lib/index.ts',

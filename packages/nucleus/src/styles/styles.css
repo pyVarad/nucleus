@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face {
-        font-family: ComicNeue;
-        font-weight: 400;
-        src: url(/fonts/Comic_Neue/ComicNeue-Regular.ttf) format("woff");
-    }
+@font-face {
+    font-family: 'Comic Neue';
+    src: url('/dist/nucleus/fonts/ComicNeue-Regular.woff2') format(woff2);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
 }

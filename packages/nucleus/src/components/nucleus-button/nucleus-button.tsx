@@ -13,16 +13,18 @@ export class NucleusButton {
 
   @Prop() disabled: true | false = false;
 
+  @Prop() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+
   render() {
     return (
       <button
         type='button'
         class={
           classNames('btn', {
-            'btn-primary': this.buttontype === 'primary',
-            'btn-secondary': this.buttontype === 'secondary',
-            'rounded-full': this.rounded,
-            'disabled': this.disabled
+            [`btn-${this.buttontype}`]: true,
+            'rounded': this.rounded,
+            'disabled': this.disabled,
+            [`btn-${this.size}`]: true
           })
         } >
         <slot />

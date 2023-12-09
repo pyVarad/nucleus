@@ -14,10 +14,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "nucleus": "*",
+    "nucleus-react": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "nucleus": "*",
-    "nucleus-react": "*"
+    "sass": "^1.69.5"
   },
   "scripts": {
     "dev": "vite",

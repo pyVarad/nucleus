@@ -74,17 +74,20 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<nucleus-button buttontype=\"primary\">Primary</nucleus-button>\n<nucleus-button buttontype=\"callToAction\">CallToAction</nucleus-button>\n<nucleus-button buttontype=\"outline\">Outline</nucleus-button>\n<nucleus-button buttontype=\"text\">Text</nucleus-button>"
+            "templateData": "<nucleus-button buttontype=\"primary\">Primary</nucleus-button>\n<nucleus-button buttontype=\"secondary\">Secondary</nucleus-button>\n<nucleus-button buttontype=\"primary\" rounded>Primary Rounded</nucleus-button>"
         },
         {
             "name": "NucleusButton",
-            "id": "component-NucleusButton-782affe44c3e44e6d26e56b116a367ac6f32dff77f4c07978302f47705744b7b3025cde301be4296fdfee00d4cd3ef2540abf69d1b14e2f7b45039691499d1e6",
+            "id": "component-NucleusButton-667b7723a94135c7ec18aee05c75749edcdf93e7b2d52b0fcd795015e1c36309bed9a60f6e1a20cc330119651986e63c5e014ad9fb370b748989a4333bb9bd70",
             "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [
-                "buttontype"
+                "buttontype",
+                "disabled",
+                "rounded",
+                "size"
             ],
             "outputs": [],
             "providers": [],
@@ -121,7 +124,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';\n\nimport { ProxyCmp } from './angular-component-lib/utils';\n\nimport { Components } from 'nucleus';\n\n\n@ProxyCmp({\n  inputs: ['buttontype']\n})\n@Component({\n  selector: 'nucleus-button',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: ['buttontype'],\n})\nexport class NucleusButton {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusButton extends Components.NucleusButton {}\n\n\n@ProxyCmp({\n})\n@Component({\n  selector: 'nucleus-tw-component',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: [],\n})\nexport class NucleusTwComponent {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusTwComponent extends Components.NucleusTwComponent {}\n\n\n",
+            "sourceCode": "import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';\n\nimport { ProxyCmp } from './angular-component-lib/utils';\n\nimport { Components } from 'nucleus';\n\n\n@ProxyCmp({\n  inputs: ['buttontype', 'disabled', 'rounded', 'size']\n})\n@Component({\n  selector: 'nucleus-button',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: ['buttontype', 'disabled', 'rounded', 'size'],\n})\nexport class NucleusButton {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusButton extends Components.NucleusButton {}\n\n\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -183,113 +186,6 @@
             },
             "extends": [
                 "Components.NucleusButton"
-            ]
-        },
-        {
-            "name": "NucleusTwComponent",
-            "id": "component-NucleusTwComponent-782affe44c3e44e6d26e56b116a367ac6f32dff77f4c07978302f47705744b7b3025cde301be4296fdfee00d4cd3ef2540abf69d1b14e2f7b45039691499d1e6",
-            "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
-            "changeDetection": "ChangeDetectionStrategy.OnPush",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "nucleus-tw-component",
-            "styleUrls": [],
-            "styles": [],
-            "template": "<ng-content></ng-content>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "el",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "HTMLElement",
-                    "optional": false,
-                    "description": "",
-                    "line": 42,
-                    "modifierKind": [
-                        124
-                    ]
-                }
-            ],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';\n\nimport { ProxyCmp } from './angular-component-lib/utils';\n\nimport { Components } from 'nucleus';\n\n\n@ProxyCmp({\n  inputs: ['buttontype']\n})\n@Component({\n  selector: 'nucleus-button',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: ['buttontype'],\n})\nexport class NucleusButton {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusButton extends Components.NucleusButton {}\n\n\n@ProxyCmp({\n})\n@Component({\n  selector: 'nucleus-tw-component',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: [],\n})\nexport class NucleusTwComponent {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusTwComponent extends Components.NucleusTwComponent {}\n\n\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [
-                    {
-                        "name": "c",
-                        "type": "ChangeDetectorRef",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    },
-                    {
-                        "name": "r",
-                        "type": "ElementRef",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    },
-                    {
-                        "name": "z",
-                        "type": "NgZone",
-                        "deprecated": false,
-                        "deprecationMessage": ""
-                    }
-                ],
-                "line": 42,
-                "jsdoctags": [
-                    {
-                        "name": "c",
-                        "type": "ChangeDetectorRef",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "r",
-                        "type": "ElementRef",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    },
-                    {
-                        "name": "z",
-                        "type": "NgZone",
-                        "deprecated": false,
-                        "deprecationMessage": "",
-                        "tagName": {
-                            "text": "param"
-                        }
-                    }
-                ]
-            },
-            "extends": [
-                "Components.NucleusTwComponent"
             ]
         }
     ],
@@ -393,7 +289,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  label: {\n    description: 'Button Label',\n    defaultValue: 'Primary',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: {\n        summary: 'Primary'\n      },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  buttontype: {\n    description: 'Button Type',\n    defaultValue: 'default',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'default'\n      },\n    },\n    control: 'select',\n    options: [\n      'default',\n      'light',\n      'dark'\n    ]\n  }\n}"
+                "defaultValue": "{\n  label: {\n    description: 'Button Label',\n    defaultValue: 'Primary',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: {\n        summary: 'Primary'\n      },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  buttontype: {\n    description: 'Button Type',\n    defaultValue: 'primary',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'primary'\n      },\n    },\n    control: 'select',\n    options: [\n      'primary',\n      'secondary'\n    ]\n  },\n  disabled: {\n    description: 'disabled',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: false\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  rounded: {\n    description: 'Rounded',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: 'rounded'\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  size: {\n    description: 'Size',\n    defaultValue: 'md',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'md'\n      },\n    },\n    control: 'select',\n    options: [\n      'xs',\n      'sm',\n      'md',\n      'lg',\n      'xl'\n    ]\n  },\n}"
             },
             {
                 "name": "buttonTypes",
@@ -403,7 +299,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryObj",
-                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='light'>button</nucleus-button>\n    <nucleus-button buttontype='dark'>button</nucleus-button>\n    `,\n  }),\n  name: 'Button Types',\n}"
+                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    <nucleus-button buttontype='secondary'>button</nucleus-button>\n    `,\n  }),\n  name: 'Button Types',\n}"
             },
             {
                 "name": "DECLARATIONS",
@@ -483,7 +379,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryObj",
-                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" [buttontype]=\"buttontype\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: 'Primary',\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
+                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" \n      [buttontype]=\"buttontype\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: 'Primary',\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
             },
             {
                 "name": "proxyInputs",
@@ -556,7 +452,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  label: {\n    description: 'Button Label',\n    defaultValue: 'Primary',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: {\n        summary: 'Primary'\n      },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  buttontype: {\n    description: 'Button Type',\n    defaultValue: 'default',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'default'\n      },\n    },\n    control: 'select',\n    options: [\n      'default',\n      'light',\n      'dark'\n    ]\n  }\n}"
+                    "defaultValue": "{\n  label: {\n    description: 'Button Label',\n    defaultValue: 'Primary',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: {\n        summary: 'Primary'\n      },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  buttontype: {\n    description: 'Button Type',\n    defaultValue: 'primary',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'primary'\n      },\n    },\n    control: 'select',\n    options: [\n      'primary',\n      'secondary'\n    ]\n  },\n  disabled: {\n    description: 'disabled',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: false\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  rounded: {\n    description: 'Rounded',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: 'rounded'\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  size: {\n    description: 'Size',\n    defaultValue: 'md',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'md'\n      },\n    },\n    control: 'select',\n    options: [\n      'xs',\n      'sm',\n      'md',\n      'lg',\n      'xl'\n    ]\n  },\n}"
                 }
             ],
             "src/stories/button/Button.stories.ts": [
@@ -568,7 +464,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StoryObj",
-                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='light'>button</nucleus-button>\n    <nucleus-button buttontype='dark'>button</nucleus-button>\n    `,\n  }),\n  name: 'Button Types',\n}"
+                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    <nucleus-button buttontype='secondary'>button</nucleus-button>\n    `,\n  }),\n  name: 'Button Types',\n}"
                 },
                 {
                     "name": "Primary",
@@ -578,7 +474,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StoryObj",
-                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" [buttontype]=\"buttontype\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: 'Primary',\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
+                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" \n      [buttontype]=\"buttontype\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: 'Primary',\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
                 }
             ],
             "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts": [
@@ -827,15 +723,6 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "NucleusButton",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NucleusTwComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"

@@ -63,4 +63,24 @@ export const buttonArgsType = {
       false
     ]
   },
+  size: {
+    description: 'Size',
+    defaultValue: 'md',
+    table: {
+      type: {
+        summary: 'text'
+      },
+      defaultValue: {
+        summary: 'md'
+      },
+    },
+    control: 'select',
+    options: [
+      'xs',
+      'sm',
+      'md',
+      'lg',
+      'xl'
+    ]
+  },
 }
