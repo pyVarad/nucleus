@@ -1,787 +1,777 @@
 {
-	"pipes": [],
-	"interfaces": [
-		{
-			"name": "User",
-			"id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
-			"file": "src/stories/User.ts",
-			"deprecated": false,
-			"deprecationMessage": "",
-			"type": "interface",
-			"sourceCode": "export interface User {}\n",
-			"properties": [],
-			"indexSignatures": [],
-			"methods": [],
-			"extends": []
-		}
-	],
-	"injectables": [],
-	"guards": [],
-	"interceptors": [],
-	"classes": [],
-	"directives": [],
-	"components": [
-		{
-			"name": "AppComponent",
-			"id": "component-AppComponent-34693d856cf40579244cdd759a5b737752603e47e0c237507ddc350e2a33953d0753e13c4279a2ab9b1ec47987448d897fcf8d5a421c4fca19d32e51af80ae7c",
-			"file": "src/app/app.component.ts",
-			"encapsulation": [],
-			"entryComponents": [],
-			"inputs": [],
-			"outputs": [],
-			"providers": [],
-			"selector": "app-root",
-			"styleUrls": ["./app.component.css"],
-			"styles": [],
-			"templateUrl": ["./app.component.html"],
-			"viewProviders": [],
-			"hostDirectives": [],
-			"inputsClass": [],
-			"outputsClass": [],
-			"propertiesClass": [
-				{
-					"name": "title",
-					"defaultValue": "'sb-nucleus-angular'",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "string",
-					"optional": false,
-					"description": "",
-					"line": 9
-				}
-			],
-			"methodsClass": [],
-			"deprecated": false,
-			"deprecationMessage": "",
-			"hostBindings": [],
-			"hostListeners": [],
-			"standalone": false,
-			"imports": [],
-			"description": "",
-			"rawdescription": "\n",
-			"type": "component",
-			"sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css'],\n})\nexport class AppComponent {\n  title = 'sb-nucleus-angular';\n}\n",
-			"assetsDirs": [],
-			"styleUrlsData": [
-				{
-					"data": "",
-					"styleUrl": "./app.component.css"
-				}
-			],
-			"stylesData": "",
-			"extends": [],
-			"templateData": "<nucleus-button buttontype=\"primary\">Primary</nucleus-button>\n<nucleus-button buttontype=\"secondary\">Secondary</nucleus-button>\n<nucleus-button buttontype=\"primary\" rounded>Primary Rounded</nucleus-button>"
-		},
-		{
-			"name": "NucleusButton",
-			"id": "component-NucleusButton-667b7723a94135c7ec18aee05c75749edcdf93e7b2d52b0fcd795015e1c36309bed9a60f6e1a20cc330119651986e63c5e014ad9fb370b748989a4333bb9bd70",
-			"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
-			"changeDetection": "ChangeDetectionStrategy.OnPush",
-			"encapsulation": [],
-			"entryComponents": [],
-			"inputs": ["buttontype", "disabled", "rounded", "size"],
-			"outputs": [],
-			"providers": [],
-			"selector": "nucleus-button",
-			"styleUrls": [],
-			"styles": [],
-			"template": "<ng-content></ng-content>",
-			"templateUrl": [],
-			"viewProviders": [],
-			"hostDirectives": [],
-			"inputsClass": [],
-			"outputsClass": [],
-			"propertiesClass": [
-				{
-					"name": "el",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "HTMLElement",
-					"optional": false,
-					"description": "",
-					"line": 21,
-					"modifierKind": [124]
-				}
-			],
-			"methodsClass": [],
-			"deprecated": false,
-			"deprecationMessage": "",
-			"hostBindings": [],
-			"hostListeners": [],
-			"standalone": false,
-			"imports": [],
-			"description": "",
-			"rawdescription": "\n",
-			"type": "component",
-			"sourceCode": "import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';\n\nimport { ProxyCmp } from './angular-component-lib/utils';\n\nimport { Components } from 'nucleus';\n\n\n@ProxyCmp({\n  inputs: ['buttontype', 'disabled', 'rounded', 'size']\n})\n@Component({\n  selector: 'nucleus-button',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: ['buttontype', 'disabled', 'rounded', 'size'],\n})\nexport class NucleusButton {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusButton extends Components.NucleusButton {}\n\n\n",
-			"assetsDirs": [],
-			"styleUrlsData": "",
-			"stylesData": "",
-			"constructorObj": {
-				"name": "constructor",
-				"description": "",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"args": [
-					{
-						"name": "c",
-						"type": "ChangeDetectorRef",
-						"deprecated": false,
-						"deprecationMessage": ""
-					},
-					{
-						"name": "r",
-						"type": "ElementRef",
-						"deprecated": false,
-						"deprecationMessage": ""
-					},
-					{
-						"name": "z",
-						"type": "NgZone",
-						"deprecated": false,
-						"deprecationMessage": ""
-					}
-				],
-				"line": 21,
-				"jsdoctags": [
-					{
-						"name": "c",
-						"type": "ChangeDetectorRef",
-						"deprecated": false,
-						"deprecationMessage": "",
-						"tagName": {
-							"text": "param"
-						}
-					},
-					{
-						"name": "r",
-						"type": "ElementRef",
-						"deprecated": false,
-						"deprecationMessage": "",
-						"tagName": {
-							"text": "param"
-						}
-					},
-					{
-						"name": "z",
-						"type": "NgZone",
-						"deprecated": false,
-						"deprecationMessage": "",
-						"tagName": {
-							"text": "param"
-						}
-					}
-				]
-			},
-			"extends": ["Components.NucleusButton"]
-		}
-	],
-	"modules": [
-		{
-			"name": "AppModule",
-			"id": "module-AppModule-aae46319b40012965d0c1cd16dce53e3c72f3ffe2a0b4ea298a734cd5d07c3687584c4e83528ebdbf73f872a7ed732ee120134e265a9ba71ec141347262ef5ef",
-			"description": "",
-			"deprecationMessage": "",
-			"deprecated": false,
-			"file": "src/app/app.module.ts",
-			"methods": [],
-			"sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { NucleusComponentLibraryModule } from 'nucleus-ng-component-library';\n\nimport { AppComponent } from './app.component';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    NucleusComponentLibraryModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
-			"children": [
-				{
-					"type": "providers",
-					"elements": []
-				},
-				{
-					"type": "declarations",
-					"elements": [
-						{
-							"name": "AppComponent"
-						}
-					]
-				},
-				{
-					"type": "imports",
-					"elements": []
-				},
-				{
-					"type": "exports",
-					"elements": []
-				},
-				{
-					"type": "bootstrap",
-					"elements": [
-						{
-							"name": "AppComponent"
-						}
-					]
-				},
-				{
-					"type": "classes",
-					"elements": []
-				}
-			]
-		},
-		{
-			"name": "NucleusComponentLibraryModule",
-			"id": "module-NucleusComponentLibraryModule-4774e1c1fc81ca3d062ef5dc179a8b8255f1094f497a3e999370e997d461353a54872417c444591feabe0243d568f4ab7f4fcb3423dcc7f85cce2cb766b27b98",
-			"description": "",
-			"deprecationMessage": "",
-			"deprecated": false,
-			"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
-			"methods": [],
-			"sourceCode": "import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\nimport { DIRECTIVES } from './nucleus-ng-component-library';\nimport { defineCustomElements } from 'nucleus/loader';\n\nimport { NucleusButton } from './nucleus-ng-component-library/proxies';\n\nconst DECLARATIONS = [\n    NucleusButton\n];\n\n@NgModule({\n    declarations: [DECLARATIONS],\n    exports: [DECLARATIONS],\n    providers: [\n        {\n            provide: APP_INITIALIZER,\n            useFactory: () => defineCustomElements,\n            multi: true\n        },\n    ],\n    schemas: [CUSTOM_ELEMENTS_SCHEMA]\n})\nexport class NucleusComponentLibraryModule { }",
-			"children": [
-				{
-					"type": "providers",
-					"elements": []
-				},
-				{
-					"type": "declarations",
-					"elements": [
-						{
-							"name": "NucleusButton"
-						}
-					]
-				},
-				{
-					"type": "imports",
-					"elements": []
-				},
-				{
-					"type": "exports",
-					"elements": [
-						{
-							"name": "NucleusButton"
-						}
-					]
-				},
-				{
-					"type": "bootstrap",
-					"elements": []
-				},
-				{
-					"type": "classes",
-					"elements": []
-				}
-			]
-		}
-	],
-	"miscellaneous": {
-		"variables": [
-			{
-				"name": "buttonArgsType",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "src/stories/button/button.args.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "object",
-				"defaultValue": "{\n  label: {\n    description: 'Button Label',\n    defaultValue: 'Primary',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: {\n        summary: 'Primary'\n      },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  buttontype: {\n    description: 'Button Type',\n    defaultValue: 'primary',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'primary'\n      },\n    },\n    control: 'select',\n    options: [\n      'primary',\n      'secondary'\n    ]\n  },\n  disabled: {\n    description: 'disabled',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: false\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  rounded: {\n    description: 'Rounded',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: 'rounded'\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  size: {\n    description: 'Size',\n    defaultValue: 'md',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'md'\n      },\n    },\n    control: 'select',\n    options: [\n      'xs',\n      'sm',\n      'md',\n      'lg',\n      'xl'\n    ]\n  },\n}"
-			},
-			{
-				"name": "buttonTypes",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "src/stories/button/Button.stories.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "StoryObj",
-				"defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    <nucleus-button buttontype='secondary'>button</nucleus-button>\n    `,\n  }),\n  name: 'Button Types',\n}"
-			},
-			{
-				"name": "DECLARATIONS",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "[]",
-				"defaultValue": "[\n    NucleusButton\n]"
-			},
-			{
-				"name": "decorators",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": ".storybook/preview.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "[]",
-				"defaultValue": "[\n  componentWrapperDecorator((story) => `<div class=\"nucleus-container\">${story}</div>`),\n]"
-			},
-			{
-				"name": "defineCustomElement",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "",
-				"defaultValue": "(tagName: string, customElement: any) => {\n  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {\n    customElements.define(tagName, customElement);\n  }\n}"
-			},
-			{
-				"name": "DIRECTIVES",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "[]",
-				"defaultValue": "[\n  d.NucleusButton\n]"
-			},
-			{
-				"name": "environment",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "src/environments/environment.prod.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "object",
-				"defaultValue": "{\n  production: true,\n}"
-			},
-			{
-				"name": "environment",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "src/environments/environment.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "object",
-				"defaultValue": "{\n  production: false,\n}"
-			},
-			{
-				"name": "preview",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": ".storybook/preview.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "Preview",
-				"defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: {\n      story: {\n        inline: true\n      }\n    },\n    direction: 'ltr',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
-			},
-			{
-				"name": "Primary",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "src/stories/button/Button.stories.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "StoryObj",
-				"defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" \n      [buttontype]=\"buttontype\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: 'Primary',\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
-			},
-			{
-				"name": "proxyInputs",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "",
-				"defaultValue": "(Cmp: any, inputs: string[]) => {\n  const Prototype = Cmp.prototype;\n  inputs.forEach((item) => {\n    Object.defineProperty(Prototype, item, {\n      get() {\n        return this.el[item];\n      },\n      set(val: any) {\n        this.z.runOutsideAngular(() => (this.el[item] = val));\n      },\n      /**\n       * In the event that proxyInputs is called\n       * multiple times re-defining these inputs\n       * will cause an error to be thrown. As a result\n       * we set configurable: true to indicate these\n       * properties can be changed.\n       */\n      configurable: true,\n    });\n  });\n}"
-			},
-			{
-				"name": "proxyMethods",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "",
-				"defaultValue": "(Cmp: any, methods: string[]) => {\n  const Prototype = Cmp.prototype;\n  methods.forEach((methodName) => {\n    Prototype[methodName] = function () {\n      const args = arguments;\n      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));\n    };\n  });\n}"
-			},
-			{
-				"name": "proxyOutputs",
-				"ctype": "miscellaneous",
-				"subtype": "variable",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"type": "",
-				"defaultValue": "(instance: any, el: any, events: string[]) => {\n  events.forEach((eventName) => (instance[eventName] = fromEvent(el, eventName)));\n}"
-			}
-		],
-		"functions": [
-			{
-				"name": "ProxyCmp",
-				"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"ctype": "miscellaneous",
-				"subtype": "function",
-				"deprecated": false,
-				"deprecationMessage": "",
-				"description": "",
-				"args": [
-					{
-						"name": "opts",
-						"deprecated": false,
-						"deprecationMessage": ""
-					}
-				],
-				"jsdoctags": [
-					{
-						"name": "opts",
-						"deprecated": false,
-						"deprecationMessage": "",
-						"tagName": {
-							"text": "param"
-						}
-					}
-				]
-			}
-		],
-		"typealiases": [],
-		"enumerations": [],
-		"groupedVariables": {
-			"src/stories/button/button.args.ts": [
-				{
-					"name": "buttonArgsType",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "src/stories/button/button.args.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "object",
-					"defaultValue": "{\n  label: {\n    description: 'Button Label',\n    defaultValue: 'Primary',\n    table: {\n      type: { summary: 'text' },\n      defaultValue: {\n        summary: 'Primary'\n      },\n    },\n    control: {\n      type: 'text'\n    }\n  },\n  buttontype: {\n    description: 'Button Type',\n    defaultValue: 'primary',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'primary'\n      },\n    },\n    control: 'select',\n    options: [\n      'primary',\n      'secondary'\n    ]\n  },\n  disabled: {\n    description: 'disabled',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: false\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  rounded: {\n    description: 'Rounded',\n    defaultValue: false,\n    table: {\n      type: {\n        summary: 'boolean'\n      },\n      defaultValue: {\n        summary: 'rounded'\n      },\n    },\n    control: 'radio',\n    options: [\n      true,\n      false\n    ]\n  },\n  size: {\n    description: 'Size',\n    defaultValue: 'md',\n    table: {\n      type: {\n        summary: 'text'\n      },\n      defaultValue: {\n        summary: 'md'\n      },\n    },\n    control: 'select',\n    options: [\n      'xs',\n      'sm',\n      'md',\n      'lg',\n      'xl'\n    ]\n  },\n}"
-				}
-			],
-			"src/stories/button/Button.stories.ts": [
-				{
-					"name": "buttonTypes",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "src/stories/button/Button.stories.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "StoryObj",
-					"defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    <nucleus-button buttontype='secondary'>button</nucleus-button>\n    `,\n  }),\n  name: 'Button Types',\n}"
-				},
-				{
-					"name": "Primary",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "src/stories/button/Button.stories.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "StoryObj",
-					"defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" \n      [buttontype]=\"buttontype\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: 'Primary',\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
-				}
-			],
-			"/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts": [
-				{
-					"name": "DECLARATIONS",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "[]",
-					"defaultValue": "[\n    NucleusButton\n]"
-				}
-			],
-			".storybook/preview.ts": [
-				{
-					"name": "decorators",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": ".storybook/preview.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "[]",
-					"defaultValue": "[\n  componentWrapperDecorator((story) => `<div class=\"nucleus-container\">${story}</div>`),\n]"
-				},
-				{
-					"name": "preview",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": ".storybook/preview.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "Preview",
-					"defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: {\n      story: {\n        inline: true\n      }\n    },\n    direction: 'ltr',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
-				}
-			],
-			"/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
-				{
-					"name": "defineCustomElement",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "",
-					"defaultValue": "(tagName: string, customElement: any) => {\n  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {\n    customElements.define(tagName, customElement);\n  }\n}"
-				},
-				{
-					"name": "proxyInputs",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "",
-					"defaultValue": "(Cmp: any, inputs: string[]) => {\n  const Prototype = Cmp.prototype;\n  inputs.forEach((item) => {\n    Object.defineProperty(Prototype, item, {\n      get() {\n        return this.el[item];\n      },\n      set(val: any) {\n        this.z.runOutsideAngular(() => (this.el[item] = val));\n      },\n      /**\n       * In the event that proxyInputs is called\n       * multiple times re-defining these inputs\n       * will cause an error to be thrown. As a result\n       * we set configurable: true to indicate these\n       * properties can be changed.\n       */\n      configurable: true,\n    });\n  });\n}"
-				},
-				{
-					"name": "proxyMethods",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "",
-					"defaultValue": "(Cmp: any, methods: string[]) => {\n  const Prototype = Cmp.prototype;\n  methods.forEach((methodName) => {\n    Prototype[methodName] = function () {\n      const args = arguments;\n      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));\n    };\n  });\n}"
-				},
-				{
-					"name": "proxyOutputs",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "",
-					"defaultValue": "(instance: any, el: any, events: string[]) => {\n  events.forEach((eventName) => (instance[eventName] = fromEvent(el, eventName)));\n}"
-				}
-			],
-			"/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts": [
-				{
-					"name": "DIRECTIVES",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "[]",
-					"defaultValue": "[\n  d.NucleusButton\n]"
-				}
-			],
-			"src/environments/environment.prod.ts": [
-				{
-					"name": "environment",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "src/environments/environment.prod.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "object",
-					"defaultValue": "{\n  production: true,\n}"
-				}
-			],
-			"src/environments/environment.ts": [
-				{
-					"name": "environment",
-					"ctype": "miscellaneous",
-					"subtype": "variable",
-					"file": "src/environments/environment.ts",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"type": "object",
-					"defaultValue": "{\n  production: false,\n}"
-				}
-			]
-		},
-		"groupedFunctions": {
-			"/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
-				{
-					"name": "ProxyCmp",
-					"file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-					"ctype": "miscellaneous",
-					"subtype": "function",
-					"deprecated": false,
-					"deprecationMessage": "",
-					"description": "",
-					"args": [
-						{
-							"name": "opts",
-							"deprecated": false,
-							"deprecationMessage": ""
-						}
-					],
-					"jsdoctags": [
-						{
-							"name": "opts",
-							"deprecated": false,
-							"deprecationMessage": "",
-							"tagName": {
-								"text": "param"
-							}
-						}
-					]
-				}
-			]
-		},
-		"groupedEnumerations": {},
-		"groupedTypeAliases": {}
-	},
-	"routes": [],
-	"coverage": {
-		"count": 0,
-		"status": "low",
-		"files": [
-			{
-				"filePath": ".storybook/preview.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "decorators",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": ".storybook/preview.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "preview",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "DECLARATIONS",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"type": "function",
-				"linktype": "miscellaneous",
-				"linksubtype": "function",
-				"name": "ProxyCmp",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "defineCustomElement",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "proxyInputs",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "proxyMethods",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "proxyOutputs",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "DIRECTIVES",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
-				"type": "component",
-				"linktype": "component",
-				"name": "NucleusButton",
-				"coveragePercent": 0,
-				"coverageCount": "0/3",
-				"status": "low"
-			},
-			{
-				"filePath": "src/app/app.component.ts",
-				"type": "component",
-				"linktype": "component",
-				"name": "AppComponent",
-				"coveragePercent": 0,
-				"coverageCount": "0/2",
-				"status": "low"
-			},
-			{
-				"filePath": "src/environments/environment.prod.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "environment",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "src/environments/environment.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "environment",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "src/stories/User.ts",
-				"type": "interface",
-				"linktype": "interface",
-				"name": "User",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "src/stories/button/Button.stories.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "buttonTypes",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "src/stories/button/Button.stories.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "Primary",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			},
-			{
-				"filePath": "src/stories/button/button.args.ts",
-				"type": "variable",
-				"linktype": "miscellaneous",
-				"linksubtype": "variable",
-				"name": "buttonArgsType",
-				"coveragePercent": 0,
-				"coverageCount": "0/1",
-				"status": "low"
-			}
-		]
-	}
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-3db08bfe3dee552c9357d2778e30d36efd342597101cb7a497ac4f94a3ddc810bfe3a2b3911d6d84b481e58e3bf595fa7f7291d50c7d02376420a73e7f1fad7a",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "\"sb-nucleus-angular\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from \"@angular/core\";\n\n@Component({\n  selector: \"app-root\",\n  templateUrl: \"./app.component.html\",\n  styleUrls: [\"./app.component.css\"],\n})\nexport class AppComponent {\n  title = \"sb-nucleus-angular\";\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<nucleus-button buttontype=\"primary\">Primary</nucleus-button>\n<nucleus-button buttontype=\"secondary\">Secondary</nucleus-button>\n<nucleus-button buttontype=\"primary\" rounded>Primary Rounded</nucleus-button>"
+        },
+        {
+            "name": "NucleusButton",
+            "id": "component-NucleusButton-667b7723a94135c7ec18aee05c75749edcdf93e7b2d52b0fcd795015e1c36309bed9a60f6e1a20cc330119651986e63c5e014ad9fb370b748989a4333bb9bd70",
+            "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
+            "changeDetection": "ChangeDetectionStrategy.OnPush",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [
+                "buttontype",
+                "disabled",
+                "rounded",
+                "size"
+            ],
+            "outputs": [],
+            "providers": [],
+            "selector": "nucleus-button",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<ng-content></ng-content>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "el",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "HTMLElement",
+                    "optional": false,
+                    "description": "",
+                    "line": 21,
+                    "modifierKind": [
+                        124
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';\n\nimport { ProxyCmp } from './angular-component-lib/utils';\n\nimport { Components } from 'nucleus';\n\n\n@ProxyCmp({\n  inputs: ['buttontype', 'disabled', 'rounded', 'size']\n})\n@Component({\n  selector: 'nucleus-button',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  template: '<ng-content></ng-content>',\n  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property\n  inputs: ['buttontype', 'disabled', 'rounded', 'size'],\n})\nexport class NucleusButton {\n  protected el: HTMLElement;\n  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {\n    c.detach();\n    this.el = r.nativeElement;\n  }\n}\n\n\nexport declare interface NucleusButton extends Components.NucleusButton {}\n\n\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "c",
+                        "type": "ChangeDetectorRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "r",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "z",
+                        "type": "NgZone",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 21,
+                "jsdoctags": [
+                    {
+                        "name": "c",
+                        "type": "ChangeDetectorRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "r",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "z",
+                        "type": "NgZone",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [
+                "Components.NucleusButton"
+            ]
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-239537dfd53acaf5450e706aed6ac99c1b53fe7acddf5d6c67d89d9367b190636d2a8cdd9a95c248f6b36c5e3a3a1c38e6de323309cec7f0f93ebd87af97d201",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from \"@angular/core\";\nimport { BrowserModule } from \"@angular/platform-browser\";\nimport { NucleusComponentLibraryModule } from \"nucleus-ng-component-library\";\n\nimport { AppComponent } from \"./app.component\";\n\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule, NucleusComponentLibraryModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "NucleusComponentLibraryModule",
+            "id": "module-NucleusComponentLibraryModule-192efd2f132929910b4219883a384d0511f6433211a82a6b188268befbf5517538a752bd081bfdac6bf4be18bd1c54c5e50f488ff0a9298a4a5d11e71cce8567",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+            "methods": [],
+            "sourceCode": "import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NgModule } from \"@angular/core\";\nimport { defineCustomElements } from \"nucleus/loader\";\nimport { DIRECTIVES } from \"./nucleus-ng-component-library\";\n\nimport { NucleusButton } from \"./nucleus-ng-component-library/proxies\";\n\nconst DECLARATIONS = [NucleusButton];\n\n@NgModule({\n  declarations: [DECLARATIONS],\n  exports: [DECLARATIONS],\n  providers: [\n    {\n      provide: APP_INITIALIZER,\n      useFactory: () => defineCustomElements,\n      multi: true,\n    },\n  ],\n  schemas: [CUSTOM_ELEMENTS_SCHEMA],\n})\nexport class NucleusComponentLibraryModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "NucleusButton"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "NucleusButton"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "buttonArgsType",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/button/button.args.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  label: {\n    description: \"Button Label\",\n    defaultValue: \"Primary\",\n    table: {\n      type: { summary: \"text\" },\n      defaultValue: {\n        summary: \"Primary\",\n      },\n    },\n    control: {\n      type: \"text\",\n    },\n  },\n  buttontype: {\n    description: \"Button Type\",\n    defaultValue: \"primary\",\n    table: {\n      type: {\n        summary: \"text\",\n      },\n      defaultValue: {\n        summary: \"primary\",\n      },\n    },\n    control: \"select\",\n    options: [\"primary\", \"secondary\"],\n  },\n  disabled: {\n    description: \"disabled\",\n    defaultValue: false,\n    table: {\n      type: {\n        summary: \"boolean\",\n      },\n      defaultValue: {\n        summary: false,\n      },\n    },\n    control: \"radio\",\n    options: [true, false],\n  },\n  rounded: {\n    description: \"Rounded\",\n    defaultValue: false,\n    table: {\n      type: {\n        summary: \"boolean\",\n      },\n      defaultValue: {\n        summary: \"rounded\",\n      },\n    },\n    control: \"radio\",\n    options: [true, false],\n  },\n  size: {\n    description: \"Size\",\n    defaultValue: \"md\",\n    table: {\n      type: {\n        summary: \"text\",\n      },\n      defaultValue: {\n        summary: \"md\",\n      },\n    },\n    control: \"select\",\n    options: [\"xs\", \"sm\", \"md\", \"lg\", \"xl\"],\n  },\n}"
+            },
+            {
+                "name": "buttonTypes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj",
+                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    <nucleus-button buttontype='secondary'>button</nucleus-button>\n    `,\n  }),\n  name: \"Button Types\",\n}"
+            },
+            {
+                "name": "DECLARATIONS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[NucleusButton]"
+            },
+            {
+                "name": "decorators",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  componentWrapperDecorator((story) => `<div class=\"nucleus-container\">${story}</div>`),\n]"
+            },
+            {
+                "name": "defineCustomElement",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(tagName: string, customElement: any) => {\n  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {\n    customElements.define(tagName, customElement);\n  }\n}"
+            },
+            {
+                "name": "DIRECTIVES",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[d.NucleusButton]"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: {\n      story: {\n        inline: true\n      }\n    },\n    direction: 'ltr',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/button/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj",
+                "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" \n      [buttontype]=\"buttontype\"\n      [disabled]=\"disabled\"\n      [rounded]=\"rounded\"\n      [size]=\"size\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: \"Primary\",\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
+            },
+            {
+                "name": "proxyInputs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(Cmp: any, inputs: string[]) => {\n  const Prototype = Cmp.prototype;\n  inputs.forEach((item) => {\n    Object.defineProperty(Prototype, item, {\n      get() {\n        return this.el[item];\n      },\n      set(val: any) {\n        this.z.runOutsideAngular(() => (this.el[item] = val));\n      },\n      /**\n       * In the event that proxyInputs is called\n       * multiple times re-defining these inputs\n       * will cause an error to be thrown. As a result\n       * we set configurable: true to indicate these\n       * properties can be changed.\n       */\n      configurable: true,\n    });\n  });\n}"
+            },
+            {
+                "name": "proxyMethods",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(Cmp: any, methods: string[]) => {\n  const Prototype = Cmp.prototype;\n  methods.forEach((methodName) => {\n    Prototype[methodName] = function () {\n      const args = arguments;\n      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));\n    };\n  });\n}"
+            },
+            {
+                "name": "proxyOutputs",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(instance: any, el: any, events: string[]) => {\n  events.forEach((eventName) => (instance[eventName] = fromEvent(el, eventName)));\n}"
+            }
+        ],
+        "functions": [
+            {
+                "name": "ProxyCmp",
+                "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "opts",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "opts",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/stories/button/button.args.ts": [
+                {
+                    "name": "buttonArgsType",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/button.args.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  label: {\n    description: \"Button Label\",\n    defaultValue: \"Primary\",\n    table: {\n      type: { summary: \"text\" },\n      defaultValue: {\n        summary: \"Primary\",\n      },\n    },\n    control: {\n      type: \"text\",\n    },\n  },\n  buttontype: {\n    description: \"Button Type\",\n    defaultValue: \"primary\",\n    table: {\n      type: {\n        summary: \"text\",\n      },\n      defaultValue: {\n        summary: \"primary\",\n      },\n    },\n    control: \"select\",\n    options: [\"primary\", \"secondary\"],\n  },\n  disabled: {\n    description: \"disabled\",\n    defaultValue: false,\n    table: {\n      type: {\n        summary: \"boolean\",\n      },\n      defaultValue: {\n        summary: false,\n      },\n    },\n    control: \"radio\",\n    options: [true, false],\n  },\n  rounded: {\n    description: \"Rounded\",\n    defaultValue: false,\n    table: {\n      type: {\n        summary: \"boolean\",\n      },\n      defaultValue: {\n        summary: \"rounded\",\n      },\n    },\n    control: \"radio\",\n    options: [true, false],\n  },\n  size: {\n    description: \"Size\",\n    defaultValue: \"md\",\n    table: {\n      type: {\n        summary: \"text\",\n      },\n      defaultValue: {\n        summary: \"md\",\n      },\n    },\n    control: \"select\",\n    options: [\"xs\", \"sm\", \"md\", \"lg\", \"xl\"],\n  },\n}"
+                }
+            ],
+            "src/stories/button/Button.stories.ts": [
+                {
+                    "name": "buttonTypes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj",
+                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button buttontype='primary'>button</nucleus-button>\n    <nucleus-button buttontype='secondary'>button</nucleus-button>\n    `,\n  }),\n  name: \"Button Types\",\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/button/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj",
+                    "defaultValue": "{\n  render: (args) => ({\n    props: args,\n    template: `\n    <nucleus-button key=\"primary-example\" \n      [buttontype]=\"buttontype\"\n      [disabled]=\"disabled\"\n      [rounded]=\"rounded\"\n      [size]=\"size\">{{label}} </nucleus-button>\n    `,\n  }),\n  name: \"Primary\",\n  parameters: {\n    controls: {\n      expanded: true,\n    },\n  },\n  argTypes: {\n    ...buttonArgsType,\n  },\n}"
+                }
+            ],
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts": [
+                {
+                    "name": "DECLARATIONS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[NucleusButton]"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "decorators",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  componentWrapperDecorator((story) => `<div class=\"nucleus-container\">${story}</div>`),\n]"
+                },
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    decorator: [\n      moduleMetadata({\n        providers: [],\n        imports: [CommonModule, NucleusComponentLibraryModule]\n      })\n    ],\n    viewMode: 'story',\n    docs: {\n      story: {\n        inline: true\n      }\n    },\n    direction: 'ltr',\n    backgrounds: { disable: true },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                }
+            ],
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
+                {
+                    "name": "defineCustomElement",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(tagName: string, customElement: any) => {\n  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {\n    customElements.define(tagName, customElement);\n  }\n}"
+                },
+                {
+                    "name": "proxyInputs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(Cmp: any, inputs: string[]) => {\n  const Prototype = Cmp.prototype;\n  inputs.forEach((item) => {\n    Object.defineProperty(Prototype, item, {\n      get() {\n        return this.el[item];\n      },\n      set(val: any) {\n        this.z.runOutsideAngular(() => (this.el[item] = val));\n      },\n      /**\n       * In the event that proxyInputs is called\n       * multiple times re-defining these inputs\n       * will cause an error to be thrown. As a result\n       * we set configurable: true to indicate these\n       * properties can be changed.\n       */\n      configurable: true,\n    });\n  });\n}"
+                },
+                {
+                    "name": "proxyMethods",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(Cmp: any, methods: string[]) => {\n  const Prototype = Cmp.prototype;\n  methods.forEach((methodName) => {\n    Prototype[methodName] = function () {\n      const args = arguments;\n      return this.z.runOutsideAngular(() => this.el[methodName].apply(this.el, args));\n    };\n  });\n}"
+                },
+                {
+                    "name": "proxyOutputs",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(instance: any, el: any, events: string[]) => {\n  events.forEach((eventName) => (instance[eventName] = fromEvent(el, eventName)));\n}"
+                }
+            ],
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts": [
+                {
+                    "name": "DIRECTIVES",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[d.NucleusButton]"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true,\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts": [
+                {
+                    "name": "ProxyCmp",
+                    "file": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "opts",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "opts",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "decorators",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DECLARATIONS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "ProxyCmp",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "defineCustomElement",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "proxyInputs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "proxyMethods",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/angular-component-lib/utils.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "proxyOutputs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/index.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DIRECTIVES",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "/Users/varad/Code/projects/playground_nx/design-system/packages/nucleus-angular/projects/nucleus-ng-component-library/src/lib/nucleus-ng-component-library/proxies.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NucleusButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "buttonTypes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button/button.args.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "buttonArgsType",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
 }

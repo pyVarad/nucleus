@@ -13,14 +13,15 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "jest --no-cache",
     "storybook": "ng run sb-nucleus-angular:storybook",
     "build-storybook": "ng run sb-nucleus-angular:build-storybook",
-    "init-msw": "msw init src/",
-    "format": "npx @biomejs/biome format \"src\" --write"
+    "lint": "biome lint \"src\"",
+    "lint:fix": "biome check --apply \"src\"",
+    "format": "biome format \"src\" --write"
   },
   "private": true,
   "dependencies": {

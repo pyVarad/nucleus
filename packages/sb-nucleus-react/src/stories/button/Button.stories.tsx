@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { buttonArgsType } from "./Button.args";
 import { NucleusButton } from "nucleus-react";
 import { ReactNode } from "react";
+import { buttonArgsType } from "./Button.args";
 
 const meta = {
   title: "component/Button",

@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* tslint:disable */
-import { fromEvent } from "rxjs";
+import { fromEvent } from 'rxjs';
 
 export const proxyInputs = (Cmp: any, inputs: string[]) => {
   const Prototype = Cmp.prototype;
@@ -39,7 +39,7 @@ export const proxyOutputs = (instance: any, el: any, events: string[]) => {
 };
 
 export const defineCustomElement = (tagName: string, customElement: any) => {
-  if (customElement !== undefined && typeof customElements !== "undefined" && !customElements.get(tagName)) {
+  if (customElement !== undefined && typeof customElements !== 'undefined' && !customElements.get(tagName)) {
     customElements.define(tagName, customElement);
   }
 };

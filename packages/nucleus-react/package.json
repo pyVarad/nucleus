@@ -8,7 +8,9 @@
   "scripts": {
     "build": "npm run tsc",
     "tsc": "tsc -p . --outDir ./dist",
-    "format": "npx @biomejs/biome format \"lib\" --write"
+    "lint": "biome lint \"lib\"",
+    "lint:fix": "biome check --apply \"lib\"",
+    "format": "biome format \"lib\" --write"
   },
   "keywords": [],
   "author": "",

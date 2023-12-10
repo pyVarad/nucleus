@@ -1,4 +1,4 @@
-import { getAssetPath, h, Host } from "@stencil/core";
+import { Host, getAssetPath, h } from "@stencil/core";
 
 export const StyledHost: typeof Host = (attrs, children) => {
   return (

@@ -1,5 +1,5 @@
-import "./App.scss";
 import { NucleusButton, defineCustomElements } from "nucleus-react";
+import "./App.scss";
 
 defineCustomElements();
 

@@ -26,8 +26,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "init-msw": "msw init public/",
-    "format": "npx @biomejs/biome format \"src\" --write"
+    "lint": "biome lint \"src\"",
+    "lint:fix": "biome check --apply \"src\"",
+    "format": "biome format \"src\" --write"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.5.2",

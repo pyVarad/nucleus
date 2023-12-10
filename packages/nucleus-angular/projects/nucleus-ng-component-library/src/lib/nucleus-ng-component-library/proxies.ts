@@ -1,20 +1,21 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from "@angular/core";
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';
 
-import { ProxyCmp } from "./angular-component-lib/utils";
+import { ProxyCmp } from './angular-component-lib/utils';
 
-import { Components } from "nucleus";
+import { Components } from 'nucleus';
+
 
 @ProxyCmp({
-  inputs: ["buttontype", "disabled", "rounded", "size"],
+  inputs: ['buttontype', 'disabled', 'rounded', 'size']
 })
 @Component({
-  selector: "nucleus-button",
+  selector: 'nucleus-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: "<ng-content></ng-content>",
+  template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ["buttontype", "disabled", "rounded", "size"],
+  inputs: ['buttontype', 'disabled', 'rounded', 'size'],
 })
 export class NucleusButton {
   protected el: HTMLElement;
@@ -24,4 +25,7 @@ export class NucleusButton {
   }
 }
 
+
 export declare interface NucleusButton extends Components.NucleusButton {}
+
+

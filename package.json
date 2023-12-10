@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "lint:fix": "nx run-many -t lint:fix",
+    "lint": "nx run-many -t lint",
     "format": "nx run-many -t format",
     "build": "nx run-many -t build",
-    "dev-react": "nx dev nucleus-react-consumer",
-    "dev-angular": "nx start nucleus-angular-consumer",
-    "dev-sb-react": "nx storybook sb-nucleus-react",
-    "dev-sb-angular": "nx storybook sb-nucleus-angular"
+    "dev-react": "nx run-many -t dev",
+    "storybook": "nx run-many -t storybook"
   },
   "private": true,
   "devDependencies": {

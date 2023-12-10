@@ -24,7 +24,9 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "format": "npx @biomejs/biome format \"src\" --write"
+    "lint": "biome lint \"src\"",
+    "lint:fix": "biome check --apply \"src\"",
+    "format": "biome format \"src\" --write"
   },
   "dependencies": {
     "@stencil/core": "^4.7.0"

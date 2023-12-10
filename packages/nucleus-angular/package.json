@@ -7,7 +7,9 @@
     "build": "ng build nucleus-ng-component-library",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "npx @biomejs/biome format \"projects\" --write"
+    "lint": "biome lint \"projects\"",
+    "lint:fix": "biome check --apply \"projects\"",
+    "format": "biome format \"projects\" --write"
   },
   "private": true,
   "dependencies": {
