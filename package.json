@@ -11,6 +11,11 @@
     "storybook": "nx run-many -t storybook"
   },
   "private": true,
+  "engineStrict": true,
+  "engines": {
+    "npm": ">=9.8.1 <11.0.0",
+    "node": ">=18.18.0"
+  },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
     "@nx/js": "17.1.3",
