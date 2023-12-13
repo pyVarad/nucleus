@@ -2,46 +2,15 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Nucleus Design System
 
-Let's discover **Docusaurus in less than 5 minutes**.
+The Nucleus Design System represents an endeavor to learn and construct a scalable design system fit for production-grade applications. Its development journey aims to comprehend various patterns of frontend development across different frameworks.
 
-## Getting Started
+Microfrontends enable the integration of multiple frameworks within a unified portal. Consequently, there arises a crucial requirement for components and design elements that seamlessly span across these diverse frameworks.
 
-Get started by **creating a new site**.
+Additionally, this pursuit is motivated by personal goals inspired by renowned design systems worldwide, such as Fluent, Carbon Design System, Material UI, Ant Design System, and several others.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Furthermore, this journey involves exploring strategies to extend a monorepo housing components designed for both web and mobile applications, employing technologies such as React Native or Ionic.
 
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+A journey of a thousand miles begins with a single step
+- Lao Tzu
