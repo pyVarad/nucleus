@@ -20,9 +20,14 @@ const sidebars: SidebarsConfig = {
         'nucleus-design-system/web-components'
       ],
     },
-
-  ],
-
+    {
+      type: 'category',
+      label: 'Developer Documentation',
+      items: [
+        'nucleus-design-system-dev-setup/getting-started'
+      ],
+    },
+  ]
 };
 
 export default sidebars;
