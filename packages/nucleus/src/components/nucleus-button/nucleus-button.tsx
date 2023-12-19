@@ -4,7 +4,7 @@ import classNames from "classnames";
 @Component({
   tag: "nucleus-button",
   styleUrl: "nucleus-button.css",
-  shadow: true,
+  shadow: false,
 })
 export class NucleusButton {
   @Prop() buttontype: "primary" | "secondary" = "primary";
