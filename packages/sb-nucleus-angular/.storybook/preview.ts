@@ -3,7 +3,7 @@ import { setCompodocJson } from "@storybook/addon-docs/angular";
 import docJson from "../documentation.json";
 import { CommonModule } from "@angular/common";
 import { enableProdMode } from "@angular/core";
-import { NucleusButton, NucleusComponentLibraryModule } from "nucleus-ng-component-library";
+import { NucleusComponentLibraryModule } from "nucleus-ng-component-library";
 import { defineCustomElements } from "nucleus/loader";
 
 setCompodocJson(docJson);
@@ -21,6 +21,13 @@ const preview: Preview = {
     ],
     viewMode: 'story',
     docs: {
+      toc: {
+        title: 'Table of Contents',
+        contentsSelector: '.sbdocs-content'
+      },
+      canvas: {
+        sourceState: 'shown'
+      },
       story: {
         inline: true
       }

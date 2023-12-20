@@ -46,4 +46,11 @@ export const buttonTypes: StoryObj = {
     `,
   }),
   name: "Button Types",
+  parameters: {
+    docs: {
+      description: {
+        story: ``
+      }
+    }
+  }
 };

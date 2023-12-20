@@ -32,13 +32,29 @@ export const Primary: Story = {
 };
 
 export const ButtonTypes: Story = {
-  render: () => {
-    NucleusButton.displayName = "NucleusButton";
-    return (
+};
+
+ButtonTypes.render = () => {
+  NucleusButton.displayName = "NucleusButton";
+  return (
+    <div>
+      <NucleusButton buttontype="primary">Call to action</NucleusButton>
+      <NucleusButton buttontype="secondary">Outline</NucleusButton>
+    </div>
+  );
+}
+
+ButtonTypes.parameters = {
+  docs: {
+    source: {
+      language: 'html',
+      format: true,
+      code: `
       <div>
         <NucleusButton buttontype="primary">Call to action</NucleusButton>
         <NucleusButton buttontype="secondary">Outline</NucleusButton>
       </div>
-    );
-  },
-};
+      `
+    }
+  }
+}
