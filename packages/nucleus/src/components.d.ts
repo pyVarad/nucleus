@@ -14,8 +14,9 @@ export namespace Components {
     }
     interface NucleusToggle {
         "checked": boolean;
+        "disabled": boolean;
         "size": "xs" | "sm" | "md" | "lg" | "xl";
-        "type": 'primary' | 'secondary';
+        "type": "primary" | "secondary";
     }
 }
 export interface NucleusToggleCustomEvent<T> extends CustomEvent<T> {
@@ -60,9 +61,10 @@ declare namespace LocalJSX {
     }
     interface NucleusToggle {
         "checked"?: boolean;
+        "disabled"?: boolean;
         "onSwitchToggle"?: (event: NucleusToggleCustomEvent<boolean>) => void;
         "size"?: "xs" | "sm" | "md" | "lg" | "xl";
-        "type"?: 'primary' | 'secondary';
+        "type"?: "primary" | "secondary";
     }
     interface IntrinsicElements {
         "nucleus-button": NucleusButton;

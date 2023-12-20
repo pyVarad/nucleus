@@ -8,3 +8,4 @@ import type { JSX } from 'nucleus';
 
 
 export const NucleusButton = /*@__PURE__*/createReactComponent<JSX.NucleusButton, HTMLNucleusButtonElement>('nucleus-button');
+export const NucleusToggle = /*@__PURE__*/createReactComponent<JSX.NucleusToggle, HTMLNucleusToggleElement>('nucleus-toggle');
