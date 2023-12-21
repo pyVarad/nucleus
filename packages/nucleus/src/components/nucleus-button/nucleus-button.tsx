@@ -7,7 +7,7 @@ import classNames from "classnames";
   shadow: false,
 })
 export class NucleusButton {
-  @Prop() buttontype: "primary" | "secondary" = "primary";
+  @Prop() type: "primary" | "secondary" = "primary";
 
   @Prop() rounded: true | false = false;
 
@@ -20,7 +20,7 @@ export class NucleusButton {
       <button
         type="button"
         class={classNames("btn", {
-          [`btn-${this.buttontype}`]: true,
+          [`btn-${this.type}`]: true,
           rounded: this.rounded,
           disabled: this.disabled,
           [`btn-${this.size}`]: true,

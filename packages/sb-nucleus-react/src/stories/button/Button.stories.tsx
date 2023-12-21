@@ -19,7 +19,7 @@ export const Primary: Story = {
     const label: ReactNode = ("label" in args ? args.label : "Primary") as ReactNode;
     return (
       <NucleusButton
-        buttontype={args.buttontype || "primary"}
+        type={args.type || "primary"}
         rounded={args.rounded || false}
         disabled={args.disabled || false}
         size={args.size}
@@ -38,8 +38,8 @@ ButtonTypes.render = () => {
   NucleusButton.displayName = "NucleusButton";
   return (
     <div>
-      <NucleusButton buttontype="primary">Call to action</NucleusButton>
-      <NucleusButton buttontype="secondary">Outline</NucleusButton>
+      <NucleusButton type="primary">Call to action</NucleusButton>
+      <NucleusButton type="secondary">Outline</NucleusButton>
     </div>
   );
 }
@@ -51,8 +51,8 @@ ButtonTypes.parameters = {
       format: true,
       code: `
       <div>
-        <NucleusButton buttontype="primary">Call to action</NucleusButton>
-        <NucleusButton buttontype="secondary">Outline</NucleusButton>
+        <NucleusButton type="primary">Call to action</NucleusButton>
+        <NucleusButton type="secondary">Outline</NucleusButton>
       </div>
       `
     }

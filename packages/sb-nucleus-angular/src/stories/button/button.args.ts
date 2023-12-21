@@ -12,8 +12,8 @@ export const buttonArgsType = {
       type: "text",
     },
   },
-  buttontype: {
-    description: "Button Type",
+  type: {
+    description: "Type",
     defaultValue: "primary",
     table: {
       type: {

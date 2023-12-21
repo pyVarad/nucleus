@@ -9,7 +9,8 @@
     "build": "nx run-many -t build",
     "dev-react": "nx run-many -t dev",
     "storybook": "nx run-many -t storybook",
-    "docs": "nx start nucleus-dev-docs"
+    "docs": "nx start nucleus-dev-docs",
+    "test": "nx test nucleus"
   },
   "private": true,
   "engineStrict": true,
