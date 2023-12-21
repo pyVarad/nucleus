@@ -35,7 +35,7 @@ export class NucleusToggle {
           onClick={() => this.triggerToggle()}
           type="checkbox"
           placeholder="false"
-          title="nucleus-button"
+          title="nucleus-toggle"
           value=""
           class="sr-only peer"
         />

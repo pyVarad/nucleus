@@ -6,9 +6,9 @@ defineCustomElements();
 function App() {
   return (
     <div className="App">
-      <NucleusButton buttontype="primary">Primary</NucleusButton>
-      <NucleusButton buttontype="secondary">Secondary</NucleusButton>
-      <NucleusButton buttontype="primary" rounded>
+      <NucleusButton type="primary">Primary</NucleusButton>
+      <NucleusButton type="secondary">Secondary</NucleusButton>
+      <NucleusButton type="primary" rounded>
         Primary Rounded
       </NucleusButton>
     </div>

@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type                                   | Default     |
-| ------------ | ------------ | ----------- | -------------------------------------- | ----------- |
-| `buttontype` | `buttontype` |             | `"primary" \| "secondary"`             | `"primary"` |
-| `disabled`   | `disabled`   |             | `boolean`                              | `false`     |
-| `rounded`    | `rounded`    |             | `boolean`                              | `false`     |
-| `size`       | `size`       |             | `"lg" \| "md" \| "sm" \| "xl" \| "xs"` | `"md"`      |
+| Property   | Attribute  | Description | Type                                   | Default     |
+| ---------- | ---------- | ----------- | -------------------------------------- | ----------- |
+| `disabled` | `disabled` |             | `boolean`                              | `false`     |
+| `rounded`  | `rounded`  |             | `boolean`                              | `false`     |
+| `size`     | `size`     |             | `"lg" \| "md" \| "sm" \| "xl" \| "xs"` | `"md"`      |
+| `type`     | `type`     |             | `"primary" \| "secondary"`             | `"primary"` |
 
 
 ----------------------------------------------

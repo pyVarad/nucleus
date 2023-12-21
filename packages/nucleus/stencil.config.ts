@@ -54,7 +54,22 @@ export const config: Config = {
 			],
 		}),
 	],
+	testing: {
+		browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'],
+		coverageThreshold: {
+			global: {
+				branches: 80,
+				functions: 60,
+				lines: 85,
+				statement: 85
+			}
+		},
+		coverageDirectory: '../../reports',
+		coverageReporters: ['cobertura', 'lcov'],
+		reporters: ["default", "jest-junit"]
+	},
 	devServer: {
 		reloadStrategy: "hmr",
+		initialLoadUrl: "/src"
 	},
 };

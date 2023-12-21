@@ -18,7 +18,7 @@ const NucleusToggle$1 = /*@__PURE__*/ proxyCustomElement(class NucleusToggle ext
         this.disabled = false;
     }
     render() {
-        return (h("label", { class: "relative inline-flex items-center cursor-pointer" }, h("input", { role: "checkbox", "aria-checked": this.checked, tabIndex: 0, checked: this.checked, disabled: this.disabled, "aria-label": "nucleus-toggle", onClick: () => this.triggerToggle(), type: "checkbox", placeholder: "false", title: "nucleus-button", value: "", class: "sr-only peer" }), h("div", { class: classnames("toggle", "peer", {
+        return (h("label", { class: "relative inline-flex items-center cursor-pointer" }, h("input", { role: "checkbox", "aria-checked": this.checked, tabIndex: 0, checked: this.checked, disabled: this.disabled, "aria-label": "nucleus-toggle", onClick: () => this.triggerToggle(), type: "checkbox", placeholder: "false", title: "nucleus-toggle", value: "", class: "sr-only peer" }), h("div", { class: classnames("toggle", "peer", {
                 [this.type]: true,
                 [this.size]: true,
             }) })));

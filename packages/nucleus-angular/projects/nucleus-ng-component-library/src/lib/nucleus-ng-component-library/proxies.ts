@@ -8,14 +8,14 @@ import { Components } from 'nucleus';
 
 
 @ProxyCmp({
-  inputs: ['buttontype', 'disabled', 'rounded', 'size']
+  inputs: ['disabled', 'rounded', 'size', 'type']
 })
 @Component({
   selector: 'nucleus-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['buttontype', 'disabled', 'rounded', 'size'],
+  inputs: ['disabled', 'rounded', 'size', 'type'],
 })
 export class NucleusButton {
   protected el: HTMLElement;

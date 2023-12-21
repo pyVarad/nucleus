@@ -20,7 +20,7 @@ export const Primary: StoryObj = {
     props: args,
     template: `
     <nucleus-button key="primary-example" 
-      [buttontype]="buttontype"
+      [type]="type"
       [disabled]="disabled"
       [rounded]="rounded"
       [size]="size">{{label}} </nucleus-button>
@@ -41,8 +41,8 @@ export const buttonTypes: StoryObj = {
   render: (args) => ({
     props: args,
     template: `
-    <nucleus-button buttontype='primary'>button</nucleus-button>
-    <nucleus-button buttontype='secondary'>button</nucleus-button>
+    <nucleus-button type='primary'>button</nucleus-button>
+    <nucleus-button type='secondary'>button</nucleus-button>
     `,
   }),
   name: "Button Types",

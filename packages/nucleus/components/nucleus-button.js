@@ -7,14 +7,14 @@ const NucleusButton$1 = /*@__PURE__*/ proxyCustomElement(class NucleusButton ext
     constructor() {
         super();
         this.__registerHost();
-        this.buttontype = "primary";
+        this.type = "primary";
         this.rounded = false;
         this.disabled = false;
         this.size = "md";
     }
     render() {
         return (h("button", { type: "button", class: classnames("btn", {
-                [`btn-${this.buttontype}`]: true,
+                [`btn-${this.type}`]: true,
                 rounded: this.rounded,
                 disabled: this.disabled,
                 [`btn-${this.size}`]: true,
@@ -22,7 +22,7 @@ const NucleusButton$1 = /*@__PURE__*/ proxyCustomElement(class NucleusButton ext
     }
     static get style() { return nucleusButtonCss; }
 }, [4, "nucleus-button", {
-        "buttontype": [1],
+        "type": [1],
         "rounded": [4],
         "disabled": [4],
         "size": [1]
