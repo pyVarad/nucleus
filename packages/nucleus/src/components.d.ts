@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface NucleusAccordion {
+    }
+    interface NucleusAccordionBody {
+    }
+    interface NucleusAccordionHeader {
+    }
     interface NucleusButton {
         "disabled": true | false;
         "rounded": true | false;
@@ -24,6 +30,24 @@ export interface NucleusToggleCustomEvent<T> extends CustomEvent<T> {
     target: HTMLNucleusToggleElement;
 }
 declare global {
+    interface HTMLNucleusAccordionElement extends Components.NucleusAccordion, HTMLStencilElement {
+    }
+    var HTMLNucleusAccordionElement: {
+        prototype: HTMLNucleusAccordionElement;
+        new (): HTMLNucleusAccordionElement;
+    };
+    interface HTMLNucleusAccordionBodyElement extends Components.NucleusAccordionBody, HTMLStencilElement {
+    }
+    var HTMLNucleusAccordionBodyElement: {
+        prototype: HTMLNucleusAccordionBodyElement;
+        new (): HTMLNucleusAccordionBodyElement;
+    };
+    interface HTMLNucleusAccordionHeaderElement extends Components.NucleusAccordionHeader, HTMLStencilElement {
+    }
+    var HTMLNucleusAccordionHeaderElement: {
+        prototype: HTMLNucleusAccordionHeaderElement;
+        new (): HTMLNucleusAccordionHeaderElement;
+    };
     interface HTMLNucleusButtonElement extends Components.NucleusButton, HTMLStencilElement {
     }
     var HTMLNucleusButtonElement: {
@@ -48,11 +72,20 @@ declare global {
         new (): HTMLNucleusToggleElement;
     };
     interface HTMLElementTagNameMap {
+        "nucleus-accordion": HTMLNucleusAccordionElement;
+        "nucleus-accordion-body": HTMLNucleusAccordionBodyElement;
+        "nucleus-accordion-header": HTMLNucleusAccordionHeaderElement;
         "nucleus-button": HTMLNucleusButtonElement;
         "nucleus-toggle": HTMLNucleusToggleElement;
     }
 }
 declare namespace LocalJSX {
+    interface NucleusAccordion {
+    }
+    interface NucleusAccordionBody {
+    }
+    interface NucleusAccordionHeader {
+    }
     interface NucleusButton {
         "disabled"?: true | false;
         "rounded"?: true | false;
@@ -67,6 +100,9 @@ declare namespace LocalJSX {
         "type"?: "primary" | "secondary";
     }
     interface IntrinsicElements {
+        "nucleus-accordion": NucleusAccordion;
+        "nucleus-accordion-body": NucleusAccordionBody;
+        "nucleus-accordion-header": NucleusAccordionHeader;
         "nucleus-button": NucleusButton;
         "nucleus-toggle": NucleusToggle;
     }
@@ -75,6 +111,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "nucleus-accordion": LocalJSX.NucleusAccordion & JSXBase.HTMLAttributes<HTMLNucleusAccordionElement>;
+            "nucleus-accordion-body": LocalJSX.NucleusAccordionBody & JSXBase.HTMLAttributes<HTMLNucleusAccordionBodyElement>;
+            "nucleus-accordion-header": LocalJSX.NucleusAccordionHeader & JSXBase.HTMLAttributes<HTMLNucleusAccordionHeaderElement>;
             "nucleus-button": LocalJSX.NucleusButton & JSXBase.HTMLAttributes<HTMLNucleusButtonElement>;
             "nucleus-toggle": LocalJSX.NucleusToggle & JSXBase.HTMLAttributes<HTMLNucleusToggleElement>;
         }

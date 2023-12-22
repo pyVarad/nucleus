@@ -12,14 +12,16 @@
 </head>
 
 <body>
-  <nucleus-toggle></nucleus-toggle>
-  <nucleus-toggle checked></nucleus-toggle>
-  <nucleus-toggle disabled></nucleus-toggle>
-  <nucleus-toggle checked disabled></nucleus-toggle>
-  <nucleus-toggle size="lg" checked></nucleus-toggle>
-  <nucleus-toggle type="secondary"></nucleus-toggle>
-  <nucleus-toggle type="secondary" disabled></nucleus-toggle>
-  <nucleus-toggle type="secondary" disabled checked></nucleus-toggle>
+  <nucleus-accordion>
+    <nucleus-accordion-header></nucleus-accordion-header>
+    <nucleus-accordion-body></nucleus-accordion-body>
+
+    <nucleus-accordion-header></nucleus-accordion-header>
+    <nucleus-accordion-body class="hidden"></nucleus-accordion-body>
+
+    <nucleus-accordion-header></nucleus-accordion-header>
+    <nucleus-accordion-body class="hidden"></nucleus-accordion-body>
+  </nucleus-accordion>
 </body>
 
 </html>
