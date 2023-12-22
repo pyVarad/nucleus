@@ -9,6 +9,10 @@ const preview = {
     viewMode: 'story',
     direction: 'ltr',
     docs: {
+      toc: {
+        title: 'Table of Contents',
+        contentsSelector: '.sbdocs-content'
+      },
       canvas: {
         sourceState: 'shown'
       }

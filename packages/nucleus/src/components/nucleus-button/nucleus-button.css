@@ -8,17 +8,20 @@
 }
 
 .btn-primary {
-    @apply bg-blue-500 text-white hover:bg-blue-700 focus:bg-blue-700 rounded-lg;
+    @apply bg-primary text-white hover:bg-primary-hover focus:bg-primary-hover rounded-lg;
 }
 
 .btn-primary:hover {
-    @apply bg-blue-700;
+    @apply bg-primary-hover;
 }
 
 .btn-secondary {
-    @apply bg-white text-gray-900 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 rounded-lg;
+    @apply bg-secondary text-gray-100 border border-gray-300 focus:outline-none hover:bg-secondary-hover focus:ring-4 focus:bg-secondary-hover rounded-lg;
 }
 
+.btn-secondary:hover {
+    @apply bg-secondary-hover
+}
 
 .btn-xs {
     @apply px-3 py-2 text-xs font-medium;

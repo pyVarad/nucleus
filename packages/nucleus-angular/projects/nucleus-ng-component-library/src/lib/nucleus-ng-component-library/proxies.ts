@@ -8,6 +8,69 @@ import { Components } from 'nucleus';
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'nucleus-accordion',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class NucleusAccordion {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface NucleusAccordion extends Components.NucleusAccordion {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'nucleus-accordion-body',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class NucleusAccordionBody {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface NucleusAccordionBody extends Components.NucleusAccordionBody {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'nucleus-accordion-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class NucleusAccordionHeader {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface NucleusAccordionHeader extends Components.NucleusAccordionHeader {}
+
+
+@ProxyCmp({
   inputs: ['disabled', 'rounded', 'size', 'type']
 })
 @Component({
